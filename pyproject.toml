@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "playwright>=1.63.0",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
 ]
@@ -19,6 +20,8 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "pytest-playwright>=0.9.0",
     "ruff>=0.16.9",
 ]
 
@@ -43,3 +46,6 @@ pythonVersion = "3.12"
 typeCheckingMode = "standard"
 strict = ["src"]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib", "--strict-markers"]

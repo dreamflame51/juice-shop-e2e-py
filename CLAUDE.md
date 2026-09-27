@@ -50,8 +50,8 @@ idiomatic Python by porting the TS project one slice at a time.
   is **ignored for now**. Port it as-is.
 
 ## Current status
-Lesson 1 (Bootstrap + config) is done. Next: **Lesson 2 — First API test**. Open it by re-asking
-the two weak questions listed in `LEARNING_LOG.md`. Don't start until the user says so.
+Lessons 1–2 are done. Next: **Lesson 3 — Typed API client + models**. Open it by re-asking the
+weak questions listed in `LEARNING_LOG.md`. Don't start until the user says so.
 
 ## Project conventions carried over from the TS project
 - No secrets/URLs in source. Everything comes from `.env` via `Settings`. `.env` is gitignored,
