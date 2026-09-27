@@ -1,0 +1,45 @@
+[project]
+name = "juice-shop-e2e"
+version = "0.1.0"
+description = "Test Automation Project"
+readme = "README.md"
+authors = [
+    { name = "dns", email = "salnikovden@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.9,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "ruff>=0.16.9",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E", "W",  # pycodestyle: basic style errors/warnings
+    "F",       # pyflakes: unused imports/variables, undefined names
+    "I",       # isort: import order
+    "B",       # bugbear: likely bugs (mutable defaults etc.)
+    "UP",      # pyupgrade: use modern syntax for our Python version
+    "SIM",     # simplify: needlessly complex code
+    "N",       # pep8-naming: snake_case / PascalCase
+    "PT",      # flake8-pytest-style: pytest idioms
+    "RUF",     # ruff-specific rules
+]
+
+[tool.pyright]
+pythonVersion = "3.12"
+typeCheckingMode = "standard"
+strict = ["src"]
+

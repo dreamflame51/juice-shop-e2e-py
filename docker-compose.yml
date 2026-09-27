@@ -1,0 +1,21 @@
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:v17.1.1
+    container_name: juice-shop-sut
+    ports:
+      - '${JUICE_SHOP_PORT}:3000'
+    environment:
+      NODE_ENV: unsafe
+    healthcheck:
+      # Image has no shell/wget/curl on PATH — use the node binary the app itself runs on.
+      test:
+        [
+          'CMD',
+          '/nodejs/bin/node',
+          '-e',
+          "require('http').get('http://localhost:3000/rest/admin/application-version', r => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
