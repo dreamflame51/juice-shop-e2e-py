@@ -50,7 +50,8 @@ idiomatic Python by porting the TS project one slice at a time.
   is **ignored for now**. Port it as-is.
 
 ## Current status
-Lessons 1–2 are done. Next: **Lesson 3 — Typed API client + models**. Open it by re-asking the
+Lessons 1–3 are done (basket/address/card client methods were moved from Lesson 3 to Lesson 7).
+Next: **Lesson 4 — First UI test**. Open it by re-asking the
 weak questions listed in `LEARNING_LOG.md`. Don't start until the user says so.
 
 ## Project conventions carried over from the TS project

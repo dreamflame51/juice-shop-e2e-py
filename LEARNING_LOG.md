@@ -71,3 +71,47 @@
 
 ### To revisit (weak answers)
 - XFAIL vs FAILED vs XPASS(strict): answered Q1 and Q3 wrong (thought the marker alone decides). Verified Q1 by hand.
+  → re-asked in Lesson 3: XPASS right but missed that `strict` makes it FAILED; confused ERROR (fixture phase)
+  with FAILED (test body). Demonstrated with `BASE_URL` override → FAILED, traceback points into the test body.
+- "What does pyright even do?": explained as `tsc --noEmit`, never runs code or reads `.env`.
+
+## Lesson 3 — Typed API client + models (2026-09-27)
+
+**Ported:** `JuiceShopClient.register` / `login` + `json()` helper → `src/juice_shop_e2e/api/client.py`;
+response shapes → `src/juice_shop_e2e/api/models.py`; `user.factory.ts` → `src/juice_shop_e2e/data/factories.py`;
+`testUser` / `registeredUser` fixtures; remaining two tests of `tests/api/auth/login.spec.ts`.
+Scope change vs plan: basket/address/card client methods moved to Lesson 7 (ported together with their tests).
+
+### Concepts
+- `BaseModel` vs TS `interface`: a live class validated at runtime; `Model.model_validate(response.json())` replaces `as T`.
+- Nested models (`LoginResponse.authentication: Authentication`); field names must match JSON keys exactly.
+- `BaseModel` ignores unknown fields by default (unlike `BaseSettings` + `.env`), which is right for API responses.
+- A model describes data shape only; logic lives in the client.
+- Custom exception: `class ApiError(Exception)` with a docstring body; `raise`, not `return`.
+- Guard clause: `if not response.ok: raise ...` then `return response`.
+- Late binding: names inside a function are resolved at call time, so helpers may be defined below their callers (still put them above for readability).
+- `str | None` attribute annotation (≈ `token?: string`), needed so pyright doesn't infer `None`.
+- Fixture instances are cached per test: every consumer gets the same `api` / `test_user` object.
+- `in` / `not in` (→ `__contains__`) replaces `toContain`.
+- Markers must be declared (`markers = [...]`) under `--strict-markers`; an unknown marker is a collection error.
+- f-strings ≈ template literals.
+- `Field(repr=False)` hides a value from `repr` (and from pytest assertion introspection output).
+
+### Pitfalls hit
+- `TestUser` would be collected by pytest (`Test*` classes) → renamed to `User`.
+- First factory draft: no email suffix/domain (collisions under parallel runs), random password instead of `.env`, static security answer.
+- `if (!response == 200):` / `else` without `:` / `return ApiError(...)` instead of `raise`.
+- Logic placed inside a model (`response = raw_login()` in `AuthSession`); typo `unmail` would fail validation.
+- `login` first posted to `USERS` without a body instead of calling `login_raw`.
+- `return api.register(user)` returns `None` (and assigning it to a variable doesn't change that).
+- Added `@smoke` to a non-smoke test, then replaced it with a non-existent `@pytest.mark.test` (caught by `--strict-markers`).
+
+### TS → Python gotchas
+- `faker` API differs (R7): `user_name()`, `pystr(min_chars=8, max_chars=8)`, `word()` instead of `petName()`.
+- JSON payload keys stay camelCase (the SUT's contract); Python names are snake_case.
+- pydantic lax mode coerces `"6"` → `6` but rejects `"abc"`.
+- In Playwright Python: `ok` / `url` / `status` are properties; `text()` / `json()` are methods (they read the body).
+
+### To revisit (weak answers)
+- `model_validate` vs `as T`: fuzzy on *when/where* pydantic fails (immediately, at the parse line, with the field path).
+- Why `ApiError` and not `assert`: missed the concrete `xfail(raises=AssertionError)` masking mechanism.

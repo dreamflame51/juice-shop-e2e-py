@@ -5,6 +5,7 @@ from playwright.sync_api import APIRequestContext, Playwright
 
 from juice_shop_e2e.api.client import JuiceShopClient
 from juice_shop_e2e.config import get_settings
+from juice_shop_e2e.data.factories import User, build_user
 
 
 @pytest.fixture(scope="session")
@@ -23,3 +24,16 @@ def api_request_context(playwright: Playwright, base_url: str) -> Iterator[APIRe
 @pytest.fixture
 def api(api_request_context: APIRequestContext) -> JuiceShopClient:
     return JuiceShopClient(api_request_context)
+
+
+@pytest.fixture
+def test_user() -> User:
+    """Freshly generated, NOT yet registered."""
+    return build_user()
+
+
+@pytest.fixture
+def registered_user(api: JuiceShopClient, test_user: User) -> User:
+    """Registered via the API: use when registration itself is not under test."""
+    api.register(test_user)
+    return test_user

@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "faker>=40.39.0",
     "playwright>=1.63.0",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
@@ -49,3 +50,5 @@ strict = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = ["--import-mode=importlib", "--strict-markers"]
+
+markers = ["smoke: fast critical-path subset (run with -m smoke)"]
