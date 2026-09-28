@@ -92,7 +92,7 @@ Extra deps beyond the brief (approved; each gets a short why/alternative note in
 | 2 | First API test | pytest discovery, first fixtures (`api_request_context`, `base_url`), `yield` teardown, `xfail(strict)` | `api/auth` SQLi test + `login_raw` |
 | 3 | Typed API client + models | pydantic models, `model_validate`, custom exception, properties, `Literal` | auth part of `juice-shop.client.ts` (`register`, `login`), rest of `tests/api/auth` (+ minimal `build_user`) |
 | 4 | First UI test | pytest-playwright `page`/`context`, overriding `context`, `browser_context_args`, sync `expect` | `tests/ui/products/search` |
-| 5 | Page objects | classes without assertions, `Locator` typing, `time.monotonic` retry loop, narrow `except` | all `pages/*`, `wait.ts`, `ui/auth/*` |
+| 5 | Page objects | classes without assertions, `Locator` typing, `time.monotonic` retry loop, narrow `except` | `login`/`registration` pages, `wait.ts`, `ui/auth/*` (basket/checkout pages + rest of `ProductsPage` → Lessons 6–7) |
 | 6 | Fixture graph + auth | dependency chain `test_user → registered_user → session → authed_page`, scopes, conftest hierarchy, `usefixtures` | `fixtures/test.ts`, `ui/basket/add-to-basket` |
 | 7 | Data builders | faker, pydantic `Field` constraints for SUT rules, per-worker uniqueness | factories, basket/address/card client methods + models, `api/basket/checkout`, `api/basket/isolation`, `ui/basket/checkout` |
 | 8 | Real concurrency | GIL vs I/O, threads vs asyncio, Playwright thread-affinity | `api/basket/concurrency` (R1) |

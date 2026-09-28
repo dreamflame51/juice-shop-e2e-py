@@ -156,3 +156,39 @@ Scope change vs plan: basket/address/card client methods moved to Lesson 7 (port
 ### To revisit (weak answers)
 - Why `expect` over `assert` in UI: missed "auto-retry".
 - Why the UI `context` override doesn't affect API tests: answered "because of the type annotation" (wrong: directory scoping; pytest ignores annotations).
+  → re-asked in Lesson 5: both answered correctly ("retries → flakiness"; "conftest applies to its dir and below").
+
+## Lesson 5 — Page objects (2026-09-28)
+
+**Ported:** `wait.ts` → `src/juice_shop_e2e/utils/wait.py`; `login.page.ts`, `registration.page.ts` →
+`src/juice_shop_e2e/pages/`; `tests/ui/auth/login.spec.ts`, `registration.spec.ts` → `tests/ui/auth/`.
+Scope change vs plan: basket/checkout pages and the rest of `ProductsPage` move to Lessons 6–7 (ported with their tests).
+
+### Concepts
+- `time.monotonic()` for deadlines (never jumps, unlike wall-clock `time.time()`); both are seconds → `timeout / 1000`.
+- `while True:` ≈ `for (;;)`.
+- Narrow `except PlaywrightTimeoutError` (aliased so it doesn't shadow the builtin `TimeoutError`); bare `raise` re-raises the caught exception with its message and traceback. Deliberate narrowing vs TS (flagged issue #6) documented in code.
+- Keyword-only params (`*,`) with defaults ≈ TS options object `{ timeout = ..., interval = ... }`.
+- Regex: `re.compile(r"...")`, raw strings, `re.IGNORECASE` ≈ `/.../i`; a plain string in `to_have_url` means exact match.
+- Playwright Python: `locator.first` / `.last` are properties; `.nth(i)` is a method.
+- Missing fixture name → `ERROR at setup` + "fixture 'x' not found"; pyright can't catch it (fixture names are pytest's business).
+- VS Code F2 (Rename Symbol) renames every usage at once.
+- Run the full suite after every step: it caught a regression in a file untouched by the step.
+
+### Pitfalls hit
+- `wait.py` draft: `Localtor` typo, missing `=` for a default, `monotonic()/1000` (wrong direction), `timeout=deadline` (absolute clock value as a duration), `if` without `:`, `raise Exception` (flagged by ruff B904).
+- `register_ling`, `registred_user`, `RegistationPage` typos (pyright doesn't flag new attribute names or fixture param names).
+- A variable named `str` shadowing the builtin.
+- The second step of the "doesn't reveal whether the account exists" test was dropped: without it the property under test isn't checked.
+- Accidental `no_results_message` → `_no_results_message` rename in `ProductsPage` (restored via `git restore`).
+- Manually wrapped signature committed unformatted: run `ruff format` before review.
+- **Recurring:** test names paraphrased instead of mirroring the TS title (4 times in Lessons 3–5). Rule: TS title → lowercase → spaces to `_`.
+- Teacher error: I first said `.first()` is a method in Python; it's a property.
+
+### TS → Python gotchas
+- Flagged TS issue #4 (inline `#navbarAccount` locator in a spec) ported as-is with a comment.
+
+### To revisit (weak answers)
+- `monotonic` vs `time`: thought they return different formats (both are seconds; the difference is clock stability).
+- Bare `raise` vs `raise Exception`: answered "catches errors better" (it's about preserving the original exception).
+- `test_user` vs `registered_user`: knew why, missed what breaks when swapped.

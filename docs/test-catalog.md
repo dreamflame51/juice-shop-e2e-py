@@ -14,6 +14,22 @@ Allure labels land in Lesson 10; until then the Epic/Category columns document t
 
 ## UI
 
+### `tests/ui/auth/test_login.py` — Login
+Epic: `UI: Authentication`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_a_registered_user_can_log_in` | Functional | `registered_user` (API-registers a fresh user before the test starts), `login_page`, `page` | Open login page → submit `registered_user`'s valid credentials → assert redirect to `#/search` and account nav visible (inline `#navbarAccount` locator kept as in TS, flagged issue #4) |
+| `test_rejects_invalid_credentials_without_revealing_whether_the_account_exists` | Security | `registered_user` (API-registered), `login_page`; a second, wholly unregistered user is built inline with `build_user()` | Two steps sharing the same assertion: (1) log in with `registered_user`'s email + wrong password → assert generic "invalid email or password" error; (2) log in with a never-registered email → assert the identical generic error |
+
+### `tests/ui/auth/test_registration.py` — Registration
+Epic: `UI: Authentication`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_a_new_customer_can_register_and_then_log_in` | Functional | `test_user` (factory-built, **not** registered: registration itself is under test), `registration_page`, `login_page`, `page` | Open registration page → register `test_user` through the UI form → assert redirect to `#/login` → log in with the same credentials → assert redirect to `#/search` |
+| `test_blocks_submission_when_the_repeated_password_does_not_match` | Functional | `test_user` (factory-built), `registration_page` | Fill email/password with a mismatched repeat password → assert submit button stays disabled |
+
 ### `tests/ui/products/test_search.py` — Product search
 Epic: `UI: Shopping`
 
