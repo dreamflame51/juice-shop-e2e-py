@@ -115,3 +115,44 @@ Scope change vs plan: basket/address/card client methods moved to Lesson 7 (port
 ### To revisit (weak answers)
 - `model_validate` vs `as T`: fuzzy on *when/where* pydantic fails (immediately, at the parse line, with the field path).
 - Why `ApiError` and not `assert`: missed the concrete `xfail(raises=AssertionError)` masking mechanism.
+  → re-asked in Lesson 4: both wrong again (thought failure at `bid > 0`; answered XPASS instead of XFAIL).
+  Demonstrated the `ValidationError` path. Memo:
+
+  | In an xfail test | Status |
+  |---|---|
+  | `AssertionError` raised (matches `raises`), setup included | XFAIL (green) |
+  | any other exception | FAILED / ERROR (red) |
+  | test passes, `strict=True` | FAILED `[XPASS(strict)]` (red) |
+
+## Lesson 4 — First UI test (2026-09-28)
+
+**Ported:** `tests/ui/products/search.spec.ts` → `tests/ui/products/test_search.py`; `context` override →
+`tests/ui/conftest.py`; minimal `ProductsPage` (`open`, `search`, `product_cards`, `no_results_message`);
+`expect.timeout` → `expect.set_options(timeout=10_000)` in `tests/conftest.py`.
+
+### Concepts
+- pytest-playwright fixtures: `browser` (session), `context` / `page` (function); `base_url` fixture flows into the context automatically.
+- Same-name fixture override: `def context(context)` receives the plugin's fixture and extends it.
+- Directory scoping: `tests/ui/conftest.py` applies only to `tests/ui/**`.
+- pytest injects fixtures **by name only**; type annotations are for pyright and ignored at runtime.
+- `add_init_script` takes JS source as a string (TS serializes an arrow function via `toString()`).
+- `TypedDict` (`SetCookieParam`): a dict with a fixed key set, checked only statically (≈ TS object type).
+- Module-level code in `conftest.py` runs once (imported once during collection) → `expect.set_options(...)`.
+- Web-first `expect(locator)` retries until the timeout; plain `assert locator.count()` checks once → flaky. `assert` is for API data.
+- UI tests are parametrized per browser: `test_x[chromium]`.
+- `_name` = private contract; locators used by tests stay public.
+
+### Pitfalls hit
+- Auto-import picked `playwright.async_api.BrowserContext` → pyright `reportUnusedCoroutine`. Always `sync_api`.
+- Cookie list: one dict with empty values, then cookie names used as dict keys instead of `"name"` values (caught by `TypedDict`).
+- `base_url.goto(...)` inside a page object; missing `self._page = page`; `click` / `fill` / `press` without `()` (B018 again).
+- Weakened assertion: `to_contain_text(["Apple"])` instead of both product names (would pass with unrelated results).
+- Test names not mirroring the TS titles (twice).
+
+### TS → Python gotchas
+- `readonly` locator fields → plain attributes set in `__init__`.
+- `getByText` → `get_by_text`; everything else keeps its name in snake_case, no `await`.
+
+### To revisit (weak answers)
+- Why `expect` over `assert` in UI: missed "auto-retry".
+- Why the UI `context` override doesn't affect API tests: answered "because of the type annotation" (wrong: directory scoping; pytest ignores annotations).

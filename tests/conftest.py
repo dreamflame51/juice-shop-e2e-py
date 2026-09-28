@@ -1,11 +1,13 @@
 from collections.abc import Iterator
 
 import pytest
-from playwright.sync_api import APIRequestContext, Playwright
+from playwright.sync_api import APIRequestContext, Playwright, expect
 
 from juice_shop_e2e.api.client import JuiceShopClient
 from juice_shop_e2e.config import get_settings
 from juice_shop_e2e.data.factories import User, build_user
+
+expect.set_options(timeout=10_000)
 
 
 @pytest.fixture(scope="session")

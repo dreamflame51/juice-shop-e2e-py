@@ -12,6 +12,16 @@ starts pre-authenticated/pre-seeded or drives that state itself.
 
 Allure labels land in Lesson 10; until then the Epic/Category columns document the intent.
 
+## UI
+
+### `tests/ui/products/test_search.py` — Product search
+Epic: `UI: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_returns_only_products_matching_the_search_term` | Functional | `products_page` (anonymous catalogue browsing, no auth needed) | Open the catalogue → search "apple" via `products_page.search()` → assert exactly 2 results, matching "Apple Juice" and "Apple Pomace" |
+| `test_shows_a_no_results_state_for_a_term_that_matches_nothing` | Functional | `products_page` | Open the catalogue → search a nonsense term → assert the "No results found" message is visible |
+
 ## API
 
 ### `tests/api/auth/test_login.py` — Auth API
