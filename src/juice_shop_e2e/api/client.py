@@ -2,12 +2,30 @@ from typing import Final
 
 from playwright.sync_api import APIRequestContext, APIResponse
 
-from juice_shop_e2e.api.models import AuthSession, LoginResponse
-from juice_shop_e2e.data.factories import User
+from juice_shop_e2e.api.models import (
+    AuthSession,
+    BasketProduct,
+    BasketResponse,
+    CheckoutResponse,
+    CreatedResponse,
+    LoginResponse,
+    OrderDetails,
+)
+from juice_shop_e2e.data.factories import Address, Card, User
 
+ADDRESSES: Final = "/api/Addresss/"
+CARDS: Final = "/api/Cards/"
 LOGIN: Final = "/rest/user/login"
 USERS: Final = "/api/Users/"
 BASKET_ITEMS: Final = "/api/BasketItems/"
+
+
+def _basket(basket_id: int) -> str:
+    return f"/rest/basket/{basket_id}"
+
+
+def _checkout(basket_id: int) -> str:
+    return f"{_basket(basket_id)}/checkout"
 
 
 class ApiError(Exception):
@@ -36,6 +54,42 @@ class JuiceShopClient:
 
     def add_to_basket(self, basket_id: int, product_id: int, quantity: int) -> None:
         _ensure_ok(self.add_to_basket_raw(basket_id, product_id, quantity))
+
+    def get_basket_raw(self, basket_id: int) -> APIResponse:
+        # TODO(lesson-10): allure step + request/response attachments
+        return self._request.get(_basket(basket_id), headers=self._auth_headers)
+
+    def get_basket(self, basket_id: int) -> list[BasketProduct]:
+        response = _ensure_ok(self.get_basket_raw(basket_id))
+        body = BasketResponse.model_validate(response.json())
+        return body.data.products
+
+    def create_address(self, address: Address) -> int:
+        # TODO(lesson-10): allure step + request/response attachments
+        response = _ensure_ok(
+            self._request.post(
+                ADDRESSES, headers=self._auth_headers, data=address.model_dump(by_alias=True)
+            )
+        )
+        return CreatedResponse.model_validate(response.json()).data.id
+
+    def create_card(self, card: Card) -> int:
+        # TODO(lesson-10): allure step + request/response attachments
+        response = _ensure_ok(
+            self._request.post(
+                CARDS, headers=self._auth_headers, data=card.model_dump(by_alias=True)
+            )
+        )
+        return CreatedResponse.model_validate(response.json()).data.id
+
+    def checkout_raw(self, basket_id: int, order_details: OrderDetails) -> APIResponse:
+        # TODO(lesson-10): allure step + request/response attachments
+        data = {"couponData": "", "orderDetails": order_details.model_dump(by_alias=True)}
+        return self._request.post(_checkout(basket_id), headers=self._auth_headers, data=data)
+
+    def checkout(self, basket_id: int, order_details: OrderDetails) -> str:
+        response = _ensure_ok(self.checkout_raw(basket_id, order_details))
+        return CheckoutResponse.model_validate(response.json()).order_confirmation
 
     def login_raw(self, email: str, password: str) -> APIResponse:
         # TODO(lesson-10): allure step + request/response attachments

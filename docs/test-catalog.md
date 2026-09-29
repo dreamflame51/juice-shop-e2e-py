@@ -56,3 +56,11 @@ Epic: `API: Authentication`
 | `smoke` `test_issues_a_jwt_and_a_basket_id_for_valid_credentials` | Functional | `registered_user` (API-registered) | `POST /rest/user/login` with valid credentials → assert 200, parse into `LoginResponse`, JWT shape (`eyJ` prefix), `umail` equals the user's email, basket id > 0 |
 | `test_rejects_a_wrong_password_with_401_and_no_token` | Security | `registered_user` (API-registered) | `POST /rest/user/login` with a wrong password → assert 401 and no token (`eyJ`) leaked in the body |
 | `test_is_not_bypassable_via_sql_injection_in_the_email_field` | Security | `api` (no user needed; the payload targets the email field itself) | `POST /rest/user/login` with a SQLi payload in the email field → asserts 401 (documents expected-secure behaviour; `xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT accepts the payload) |
+
+### `tests/api/basket/test_checkout.py` — Checkout API
+Epic: `API: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_completes_an_order_end_to_end_and_returns_a_confirmation` | Performance (flagged TS issue #1, ported as-is) | `api` + `session` (registers + logs in a user, authenticates the `api` client) | Add product to basket via `api.add_to_basket` → assert basket has 1 product with quantity 2 → create address + card (sequential, was `Promise.all`) → `POST checkout` → assert confirmation id format |
+| `test_empties_the_basket_once_the_order_is_placed` | Performance + Functional (two labels, flagged TS issue #1) | `api` + `session` | Add product → create address + card → check out → assert basket is empty afterward |

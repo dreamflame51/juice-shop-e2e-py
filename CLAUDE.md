@@ -50,8 +50,8 @@ idiomatic Python by porting the TS project one slice at a time.
   is **ignored for now**. Port it as-is.
 
 ## Current status
-Lessons 1–6 are done. Scope moves: address/card/checkout client methods and the checkout page →
-Lesson 7. Flagged TS issue #7 (over-broad `mat-card`) deferred to Lesson 9. Next: **Lesson 7 — Data builders**. Open it by re-asking the
+Lessons 1–6 and 7a are done (Lesson 7 was split). Flagged TS issue #7 (over-broad `mat-card`)
+deferred to Lesson 9. Next: **Lesson 7b — basket isolation API tests + UI checkout** (CheckoutPage). Open it by re-asking the
 weak questions listed in `LEARNING_LOG.md`. Don't start until the user says so.
 
 ## Project conventions carried over from the TS project

@@ -229,3 +229,46 @@ Scope change vs plan: basket/checkout pages and the rest of `ProductsPage` move 
 - Why `usefixtures` + why page objects share the authenticated page (cached `page`): described the outcome, not the mechanism.
 - Who authenticates `api`: thought the `api` fixture logs in (it's `session`, mutating the shared instance).
 - Why `json.dumps` for the init script: answered "no such method" (it's escaping/injection safety).
+  → re-asked in Lesson 7: all three answered correctly.
+
+## Lesson 7a — Data builders + checkout client (2026-09-29)
+
+Lesson 7 split into 7a (factories, checkout client, API checkout tests) and 7b (basket isolation + UI checkout).
+
+**Ported:** `address.factory.ts` / `card.factory.ts` → `Address` / `Card` models + `build_address` / `build_card`;
+client `get_basket(_raw)`, `create_address`, `create_card`, `checkout(_raw)` + response/request models;
+`tests/api/basket/checkout.spec.ts` → `tests/api/basket/test_checkout.py`.
+
+### Concepts
+- `ConfigDict(alias_generator=to_camel, validate_by_name=True)` + `model_dump(by_alias=True)`: snake_case in Python, camelCase on the wire.
+- `Field(alias="Products")` for one-off PascalCase keys; `list[Model]` parses every element.
+- SUT rules in the model: `Field(pattern=...)` for strings, `Field(ge=..., le=...)` for numbers → a broken factory fails fast.
+- Model = rules, factory = values (`fake.random_int`, `fake.numerify("#" * 10)`); `"#" * 10` ≈ `'#'.repeat(10)`.
+- pydantic models take keyword arguments only (`BaseModel.__init__(self, **data)`).
+- Parametrized URLs as small module functions (`_basket(id)`, `_checkout(id)` built from `_basket`).
+- `Promise.all` → sequential calls when parallelism was only for speed (R2).
+- `len(x)` (→ `__len__`); `assert x == []` gives a better failure diff than `len(x) == 0`.
+- `re.fullmatch` returns `Match | None`; `assert re.fullmatch(...)` checks truthiness.
+- Trailing ("magic") comma keeps ruff format from collapsing; `x = 1,` is a tuple.
+- TS doesn't parse JSON into types (`as T` is compile-time only); property names equal JSON keys there.
+
+### Pitfalls hit
+- `mobile_num = str(Field(...))` (assignment instead of annotation); `\s{5}` pattern on street address.
+- Positional args to `Address(...)` and `OrderDetails({...})`.
+- `Card` class indented inside `Address` (ImportError); `card_num: int = Field(ge=16, le=16)` (value, not length; card numbers are strings).
+- `exp_month=Field(ge=1, le=12)` passed as a value in the factory.
+- Empty class body with only a comment; `-> .data.id` copied from my TODO shorthand.
+- `{ couponData: "", order_details }` (unquoted key + shorthand, again); missing auth headers on checkout.
+- `api.create_address` without `()` / argument (F401 unused factory imports was the hint).
+- `assert confirmation == re.fullmatch(...)` (str vs Match → always False).
+- **Recurring:** test name paraphrased (`test_empties_er`, 5th time); test placed out of TS order.
+- Teacher error: referenced stale line numbers after the file changed; use method names instead.
+
+### TS → Python gotchas
+- `/api/Addresss/` (three `s`) is the real Juice Shop route; copy SUT routes/keys verbatim.
+- Flagged TS issue #1 (Performance/Functional labels) kept as TODO comments.
+
+### To revisit (weak answers)
+- Why SUT constraints live in the model: "extra check" without the *broken factory fails fast* point.
+- `alias_generator` + `by_alias=True`: didn't know (without it snake_case keys go to the SUT).
+- `re.fullmatch` returns `Match | None`: didn't know why `== ` is always False.
