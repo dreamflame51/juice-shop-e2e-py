@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Jill Davis","cardNum":4766752237731111,"expMonth":3,"expYear":2091,"UserId":29,"updatedAt":"2026-09-29T16:39:54.640Z","createdAt":"2026-09-29T16:39:54.640Z"}}

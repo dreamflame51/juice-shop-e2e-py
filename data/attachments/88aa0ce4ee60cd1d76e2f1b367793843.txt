@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Angela Taylor","mobileNum":3614264630,"zipCode":"87794","streetAddress":"4452 Samantha Freeway Suite 791","city":"South Danielleville","state":"Rhode Island","country":"Grenada","UserId":29,"updatedAt":"2026-09-29T16:39:54.599Z","createdAt":"2026-09-29T16:39:54.599Z"}}

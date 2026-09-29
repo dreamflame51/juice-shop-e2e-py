@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":24,"email":"tiffany96.pvepwnun@e2e.test","updatedAt":"2026-09-29T16:40:18.047Z","createdAt":"2026-09-29T16:40:18.047Z","deletedAt":null}}
