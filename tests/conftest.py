@@ -4,6 +4,7 @@ import pytest
 from playwright.sync_api import APIRequestContext, Playwright, expect
 
 from juice_shop_e2e.api.client import JuiceShopClient
+from juice_shop_e2e.api.models import AuthSession
 from juice_shop_e2e.config import get_settings
 from juice_shop_e2e.data.factories import User, build_user
 
@@ -39,3 +40,13 @@ def registered_user(api: JuiceShopClient, test_user: User) -> User:
     """Registered via the API: use when registration itself is not under test."""
     api.register(test_user)
     return test_user
+
+
+@pytest.fixture
+def session(api: JuiceShopClient, registered_user: User) -> AuthSession:
+    """Logs in `registered_user` via the API.
+
+    Side effect: the same `api` instance becomes authenticated (it stores the token),
+    so a test that requests both `api` and `session` gets an authenticated client.
+    """
+    return api.login(registered_user)

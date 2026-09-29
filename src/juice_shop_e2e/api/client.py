@@ -7,6 +7,7 @@ from juice_shop_e2e.data.factories import User
 
 LOGIN: Final = "/rest/user/login"
 USERS: Final = "/api/Users/"
+BASKET_ITEMS: Final = "/api/BasketItems/"
 
 
 class ApiError(Exception):
@@ -23,6 +24,18 @@ class JuiceShopClient:
     def __init__(self, request: APIRequestContext) -> None:
         self._request = request
         self._token: str | None = None
+
+    @property
+    def _auth_headers(self) -> dict[str, str]:
+        return {"Authorization": f"Bearer {self._token}"} if self._token else {}
+
+    def add_to_basket_raw(self, basket_id: int, product_id: int, quantity: int) -> APIResponse:
+        # TODO(lesson-10): allure step + request/response attachments
+        data = {"BasketId": basket_id, "ProductId": product_id, "quantity": quantity}
+        return self._request.post(BASKET_ITEMS, headers=self._auth_headers, data=data)
+
+    def add_to_basket(self, basket_id: int, product_id: int, quantity: int) -> None:
+        _ensure_ok(self.add_to_basket_raw(basket_id, product_id, quantity))
 
     def login_raw(self, email: str, password: str) -> APIResponse:
         # TODO(lesson-10): allure step + request/response attachments

@@ -141,6 +141,10 @@ Per the rules: ported faithfully, not silently fixed.
 3. **Inherently flaky xfail** — `api/basket/concurrency.spec.ts`: the race is non-deterministic; if all 5 requests happen to serialize, `test.fail()` flips to an unexpected pass → red build. Same in Python with `strict=True`.
 4. **Locator in a spec** — `ui/auth/login.spec.ts` uses `page.locator('#navbarAccount')` inline → violates "specs don't own locators". Candidate for a nav/header page object.
 5. **Dead branch** — `layerFromFile` returns `'Perf'`, but perf never runs through Playwright (YAGNI). Not ported.
+7. **Over-broad `mat-card` locator** — `ProductsPage.productCards = page.locator('mat-card')` also matches Juice Shop's
+   "challenge solved" notification (rendered as a `mat-card`). Any test that triggers a challenge (e.g. a 500 → "Error
+   Handling") right before `ui/products/search` makes `toHaveCount(2)` see 3. Hit in Lesson 6 (Python), latent in TS too.
+   Candidate fix: scope the locator to the product grid. → **Deferred to Lesson 9** (flakiness/retries).
 6. **`clickUntilVisible` catches every error**, not only timeouts → a real error (detached element, wrong selector) is retried until the deadline. Python port catches `playwright.sync_api.TimeoutError` only — this narrows behaviour; flag in Lesson 5.
 
 ---

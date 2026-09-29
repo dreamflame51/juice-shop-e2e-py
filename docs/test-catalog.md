@@ -30,6 +30,14 @@ Epic: `UI: Authentication`
 | `smoke` `test_a_new_customer_can_register_and_then_log_in` | Functional | `test_user` (factory-built, **not** registered: registration itself is under test), `registration_page`, `login_page`, `page` | Open registration page → register `test_user` through the UI form → assert redirect to `#/login` → log in with the same credentials → assert redirect to `#/search` |
 | `test_blocks_submission_when_the_repeated_password_does_not_match` | Functional | `test_user` (factory-built), `registration_page` | Fill email/password with a mismatched repeat password → assert submit button stays disabled |
 
+### `tests/ui/basket/test_add_to_basket.py` — Basket
+Epic: `UI: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_an_authenticated_user_can_add_a_product_to_the_basket` | Functional | `authed_page` via `usefixtures` (registers + logs in a user via the API, injects the session token, no UI login); `products_page`, `basket_page` | Open products page → add product from catalogue → assert snackbar confirmation → open basket → assert row/quantity/checkout button state (quantity regex `/1/` is weak, flagged issue #2) |
+| `test_basket_seeded_through_the_api_is_reflected_in_the_ui` | Functional | `authed_page` via `usefixtures`; `api` + `session` used mid-test to seed the basket; `basket_page` | Seed 2 units via `api.add_to_basket(session.basket_id, ...)` → open basket UI → assert quantity reflects the API-seeded state (regex `/2/`, flagged issue #2) |
+
 ### `tests/ui/products/test_search.py` — Product search
 Epic: `UI: Shopping`
 

@@ -1,6 +1,10 @@
+import json
+
 import pytest
 from playwright.sync_api import BrowserContext, Page
 
+from juice_shop_e2e.api.models import AuthSession
+from juice_shop_e2e.pages.basket_page import BasketPage
 from juice_shop_e2e.pages.login_page import LoginPage
 from juice_shop_e2e.pages.products_page import ProductsPage
 from juice_shop_e2e.pages.registration_page import RegistrationPage
@@ -38,3 +42,22 @@ def login_page(page: Page) -> LoginPage:
 @pytest.fixture
 def registration_page(page: Page) -> RegistrationPage:
     return RegistrationPage(page)
+
+
+@pytest.fixture
+def authed_page(page: Page, context: BrowserContext, session: AuthSession, base_url: str) -> Page:
+    """Browser page already authenticated as `registered_user` (no UI login)."""
+    context.add_cookies([{"name": "token", "value": session.token, "url": base_url}])
+    context.add_init_script(
+        f"""
+        window.localStorage.setItem('token', {json.dumps(session.token)});
+        window.sessionStorage.setItem('bid', {json.dumps(str(session.basket_id))});
+        """
+    )
+    page.goto("/")
+    return page
+
+
+@pytest.fixture
+def basket_page(page: Page) -> BasketPage:
+    return BasketPage(page)

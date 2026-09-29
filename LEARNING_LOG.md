@@ -192,3 +192,40 @@ Scope change vs plan: basket/checkout pages and the rest of `ProductsPage` move 
 - `monotonic` vs `time`: thought they return different formats (both are seconds; the difference is clock stability).
 - Bare `raise` vs `raise Exception`: answered "catches errors better" (it's about preserving the original exception).
 - `test_user` vs `registered_user`: knew why, missed what breaks when swapped.
+  → re-asked in Lesson 6: all three answered correctly.
+
+## Lesson 6 — Fixture graph + auth (2026-09-29)
+
+**Ported:** `session` + `authedPage` fixtures; `basket.page.ts` → `BasketPage`; `ProductsPage` snackbar /
+`product_card` / `add_to_basket`; client `_auth_headers`, `add_to_basket_raw`, `add_to_basket`;
+`tests/ui/basket/add-to-basket.spec.ts` → `tests/ui/basket/test_add_to_basket.py`.
+
+### Concepts
+- Fixture graph `test_user → registered_user → session → authed_page`; each fixture built once per test.
+- R9 in action: `session` calls `api.login()`, which stores the token in the **same** cached `api` instance.
+- `@pytest.mark.usefixtures("authed_page")` for side-effect-only fixtures; page objects share the cached `page`.
+- Python `add_init_script` has no `arg`: embed values with `json.dumps(...)` (a valid, escaped JS literal).
+- `@property` ≈ TS getter (accessed without `()`); conditional expression `a if cond else b` ≈ `cond ? a : b`.
+- `dict[str, str]` ≈ `Record<string, string>`.
+- `locator.filter(has_text=...)`, `get_by_role("button", name=re.compile(...))`, chained `locator(...)`.
+- `_raw` method returns the response for status assertions; the plain method goes through `_ensure_ok` for setup.
+
+### Pitfalls hit
+- `from pydantic import json` (auto-import): pyright was silent because `pydantic.json` has a module-level `__getattr__`; runtime `AttributeError`. Import stdlib modules directly.
+- Unquoted dict keys `{name: ...}` (JS habit; Python evaluates variables).
+- `get_by_role("button", name=name)` with the product name, and no `.click()` (not caught: it's a call, not a bare attribute).
+- `has_text="productName"` (string literal instead of the variable; unused param would need ruff `ARG`).
+- Regex written as JS literal strings `"/placed .* into basket/i"` → exact-text match; must be `re.compile(...)`.
+- `self._token.__dict__` for headers; `{..., quantity}` shorthand; options object passed as a positional dict; `self._auth.headersS`.
+- `add_to_basket` calling itself (infinite recursion).
+- Payload keys changed to `basketId` / `productId` → SUT 500 "ProductId undefined". SUT contract keys are copied verbatim.
+- Not running `ruff check --fix` (import order) — fixed by me several times.
+
+### TS → Python gotchas
+- New flagged TS issue #7: `mat-card` also matches the "challenge solved" notification → the search test saw 3 cards after a 500 solved "Error Handling". Deferred to Lesson 9 (flakiness), parity kept for now.
+- Flagged issue #2 (`/1/`, `/2/` weak regex) ported as-is with comments.
+
+### To revisit (weak answers)
+- Why `usefixtures` + why page objects share the authenticated page (cached `page`): described the outcome, not the mechanism.
+- Who authenticates `api`: thought the `api` fixture logs in (it's `session`, mutating the shared instance).
+- Why `json.dumps` for the init script: answered "no such method" (it's escaping/injection safety).
