@@ -1,5 +1,6 @@
 from typing import Final
 
+import allure
 import pytest
 from playwright.sync_api import APIRequestContext
 
@@ -7,7 +8,7 @@ from juice_shop_e2e.api.client import JuiceShopClient
 from juice_shop_e2e.api.models import AuthSession, OrderDetails
 from juice_shop_e2e.data.factories import build_address, build_card, build_user
 
-# TODO(lesson-10): allure epic "API: Shopping", category "Security"
+pytestmark = [allure.epic("API: Shopping"), allure.label("category", "Security")]
 
 APPLE_JUICE_ID: Final = 1
 
@@ -37,8 +38,9 @@ def test_rejects_adding_items_to_another_users_basket(
 def test_does_not_let_another_user_read_a_victims_basket_contents(
     api: JuiceShopClient, session: AuthSession, attacker: JuiceShopClient
 ) -> None:
-    # TODO(lesson-10): step 'victim adds an item to their own basket'
-    api.add_to_basket(session.basket_id, APPLE_JUICE_ID, 1)
+    with allure.step("victim adds an item to their own basket"):
+        api.add_to_basket(session.basket_id, APPLE_JUICE_ID, 1)
+
     response = attacker.get_basket_raw(session.basket_id)
     assert response.status == 403
 
@@ -53,11 +55,13 @@ def test_does_not_let_another_user_read_a_victims_basket_contents(
 def test_does_not_let_another_user_check_out_a_victims_basket(
     api: JuiceShopClient, session: AuthSession, attacker: JuiceShopClient
 ) -> None:
-    # TODO(lesson-10): step 'victim adds an item to their own basket'
-    api.add_to_basket(session.basket_id, APPLE_JUICE_ID, 1)
-    # TODO(lesson-10): step 'attacker creates their own address and card'
-    address_id = attacker.create_address(build_address())
-    payment_id = attacker.create_card(build_card())
+    with allure.step("victim adds an item to their own basket"):
+        api.add_to_basket(session.basket_id, APPLE_JUICE_ID, 1)
+
+    with allure.step("attacker creates their own address and card"):
+        address_id = attacker.create_address(build_address())
+        payment_id = attacker.create_card(build_card())
+
     response = attacker.checkout_raw(
         session.basket_id,
         OrderDetails(address_id=address_id, payment_id=payment_id, delivery_method_id=3),

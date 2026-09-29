@@ -10,7 +10,9 @@ Legend: **Layer** = UI / API (Allure `parentSuite`, derived from the directory).
 [tests/conftest.py](../tests/conftest.py)). Listed explicitly so it's clear whether a test
 starts pre-authenticated/pre-seeded or drives that state itself.
 
-Allure labels land in Lesson 10; until then the Epic/Category columns document the intent.
+Epic/category come from `pytestmark` / `@allure.label` in each module; the layer from an autouse
+fixture in `tests/api/conftest.py` / `tests/ui/conftest.py`. Every API call is an Allure step with
+request/response attachments (`JuiceShopClient._call`).
 
 ## UI
 

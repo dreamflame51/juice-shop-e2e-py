@@ -1,5 +1,6 @@
 import json
 
+import allure
 import pytest
 from playwright.sync_api import BrowserContext, Page
 
@@ -9,6 +10,13 @@ from juice_shop_e2e.pages.checkout_page import CheckoutPage
 from juice_shop_e2e.pages.login_page import LoginPage
 from juice_shop_e2e.pages.products_page import ProductsPage
 from juice_shop_e2e.pages.registration_page import RegistrationPage
+
+
+@pytest.fixture(autouse=True)
+def _layer_label() -> None:
+    """Tags every test under tests/ui/ with its Allure layer (TS: autoLayerLabel)."""
+    allure.dynamic.parent_suite("UI")
+    allure.dynamic.label("layer", "UI")
 
 
 @pytest.fixture

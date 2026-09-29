@@ -316,3 +316,18 @@ Mode switch (interview MVP, ~4h left): Claude writes, the user reviews and asks 
 - Shared-SUT state: repeated checkouts drained Apple Juice stock → `400 out of stock` in 8 tests. Fix: restart the
   SUT (Juice Shop re-seeds on start); CI always starts a fresh container. Stock check precedes the auth check,
   so the isolation test saw 400 instead of 401.
+
+## Lesson 10 — Reporting (2026-09-29)
+
+- `allure-pytest` (dev, the plugin) vs `allure-python-commons` (runtime: `src/` imports `allure` directly).
+- Layer label: autouse `_layer_label` fixture per `tests/api/` and `tests/ui/` conftest replaces the TS
+  path regex (`layerFromFile`): the conftest hierarchy *is* the layer.
+- Epic/category: `pytestmark = [allure.epic(...), allure.label("category", ...)]` per module,
+  `@allure.label(...)` per test (decorators, not `beforeEach` hooks).
+- Steps: `with allure.step(...)` — a context manager (closes on exceptions too), vs TS callback.
+- Client `_call(step_name, request_body, send: Callable[[], APIResponse])` + lambdas: every request is a step
+  with Request/Response attachments. User wrote it; pitfalls: `from pydantic import json` again, and
+  indentation put `send()` inside `if request_body is not None` → pyright `possibly unbound` caught it.
+- Allure 3 HTML via `npx allure@3.14.3 generate allure-results`; `allurerc.mjs` exports a plain object
+  (no `defineConfig` import → no node_modules needed).
+- Kept parity: login/register Request attachments include the password (same as TS). Candidate hardening.
