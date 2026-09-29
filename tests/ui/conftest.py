@@ -5,6 +5,7 @@ from playwright.sync_api import BrowserContext, Page
 
 from juice_shop_e2e.api.models import AuthSession
 from juice_shop_e2e.pages.basket_page import BasketPage
+from juice_shop_e2e.pages.checkout_page import CheckoutPage
 from juice_shop_e2e.pages.login_page import LoginPage
 from juice_shop_e2e.pages.products_page import ProductsPage
 from juice_shop_e2e.pages.registration_page import RegistrationPage
@@ -61,3 +62,8 @@ def authed_page(page: Page, context: BrowserContext, session: AuthSession, base_
 @pytest.fixture
 def basket_page(page: Page) -> BasketPage:
     return BasketPage(page)
+
+
+@pytest.fixture
+def checkout_page(page: Page) -> CheckoutPage:
+    return CheckoutPage(page)

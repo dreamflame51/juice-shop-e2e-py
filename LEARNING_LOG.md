@@ -272,3 +272,32 @@ client `get_basket(_raw)`, `create_address`, `create_card`, `checkout(_raw)` + r
 - Why SUT constraints live in the model: "extra check" without the *broken factory fails fast* point.
 - `alias_generator` + `by_alias=True`: didn't know (without it snake_case keys go to the SUT).
 - `re.fullmatch` returns `Match | None`: didn't know why `== ` is always False.
+
+## Lesson 7b — Basket isolation + UI checkout (2026-09-29)
+
+7a took ~3h; 7b done in one go at the user's request ("finish 7 as is").
+
+**Ported:** `tests/api/basket/isolation.spec.ts` → `tests/api/basket/test_isolation.py` (1 pass + 2 xfail);
+`checkout.page.ts` → `CheckoutPage`; `tests/ui/basket/checkout.spec.ts` → `tests/ui/basket/test_checkout.py`.
+
+### Concepts
+- Module-local fixture `attacker` (user's own idea): extracts the 3× duplicated "second user" setup. Setup
+  order changes vs TS (attacker before victim's seeding) without changing intent; a broken attacker setup is
+  `ERROR`, not masked by `xfail(raises=AssertionError)`.
+- `usefixtures("session")` to make an implicit dependency (authenticated `api`) explicit.
+- Adjacent string literals concatenate at compile time; ruff format joins them back when they fit.
+- `click(force=True)`; `True` / `False` / `None` are capitalized.
+- Private helper for identical page-object steps while keeping the TS public method names.
+- `to_have_url("...")` = exact full-URL match; `re.compile(...)` = regex search (anchors optional).
+
+### Pitfalls hit
+- Changed literal (quantity 2 vs 1).
+- Draft and skeleton mixed in one file → every method declared twice (`reportRedeclaration`), empty bodies.
+- `{name: ...}` options object / positional `name` in `get_by_role` (again).
+- Missing `re.IGNORECASE` (`/i`), raw string instead of `re.compile` for a URL, dropped assertion.
+  User asked me to apply these last three fixes ("do it yourself").
+
+### To revisit (weak answers)
+- Why `attacker` can't mask a broken setup: said "xfail only applies inside the test" (it covers setup too;
+  it's the `raises` filter).
+- String vs `re.compile` in `to_have_url`: thought string = substring and `re.compile` "escapes" (reversed).

@@ -38,6 +38,13 @@ Epic: `UI: Shopping`
 | `smoke` `test_an_authenticated_user_can_add_a_product_to_the_basket` | Functional | `authed_page` via `usefixtures` (registers + logs in a user via the API, injects the session token, no UI login); `products_page`, `basket_page` | Open products page → add product from catalogue → assert snackbar confirmation → open basket → assert row/quantity/checkout button state (quantity regex `/1/` is weak, flagged issue #2) |
 | `test_basket_seeded_through_the_api_is_reflected_in_the_ui` | Functional | `authed_page` via `usefixtures`; `api` + `session` used mid-test to seed the basket; `basket_page` | Seed 2 units via `api.add_to_basket(session.basket_id, ...)` → open basket UI → assert quantity reflects the API-seeded state (regex `/2/`, flagged issue #2) |
 
+### `tests/ui/basket/test_checkout.py` — Checkout
+Epic: `UI: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_a_user_can_complete_checkout_end_to_end` | Functional | `authed_page` (registers + logs in a user via the API, no UI login); `session` via `usefixtures` (keeps `api` authenticated); `api` used mid-test to seed address/card; `products_page`, `basket_page`, `checkout_page` | Seed a delivery address + payment card via `api.create_address` / `api.create_card` → add product via UI → open basket → go to checkout → select address → select delivery method → select payment → place order → assert confirmation heading and `#/order-completion/<id>` URL |
+
 ### `tests/ui/products/test_search.py` — Product search
 Epic: `UI: Shopping`
 
@@ -64,3 +71,12 @@ Epic: `API: Shopping`
 |---|---|---|---|
 | `smoke` `test_completes_an_order_end_to_end_and_returns_a_confirmation` | Performance (flagged TS issue #1, ported as-is) | `api` + `session` (registers + logs in a user, authenticates the `api` client) | Add product to basket via `api.add_to_basket` → assert basket has 1 product with quantity 2 → create address + card (sequential, was `Promise.all`) → `POST checkout` → assert confirmation id format |
 | `test_empties_the_basket_once_the_order_is_placed` | Performance + Functional (two labels, flagged TS issue #1) | `api` + `session` | Add product → create address + card → check out → assert basket is empty afterward |
+
+### `tests/api/basket/test_isolation.py` — Basket isolation between users
+Epic: `API: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `test_rejects_adding_items_to_another_users_basket` | Security | `session` (victim, API-registered + logged in); `attacker` (module fixture: a second user registered + logged in with its own client; inline in TS) | Attacker calls `add_to_basket_raw` against the victim's `basket_id` → assert `401` |
+| `test_does_not_let_another_user_read_a_victims_basket_contents` | Security | `api` + `session` (victim); `attacker` | Victim adds an item to their own basket → attacker calls `get_basket_raw` against the victim's `basket_id` → asserts `403` (documents expected-secure behaviour; `xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` with the victim's basket) |
+| `test_does_not_let_another_user_check_out_a_victims_basket` | Security | `api` + `session` (victim); `attacker`, who creates their own address/card | Victim adds an item to their own basket → attacker calls `checkout_raw` against the victim's `basket_id` with the attacker's own address/card → asserts `403` (`xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` and completes the order) |
