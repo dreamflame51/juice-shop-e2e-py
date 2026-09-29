@@ -1,0 +1,31 @@
+name: Setup
+description: Install uv + Python deps (from uv.lock), and materialise .env from CI configuration.
+
+inputs:
+  test-user-password:
+    description: Password used for factory-generated test users.
+    required: true
+
+runs:
+  using: composite
+  steps:
+    # uv reads .python-version and downloads that interpreter; the cache is keyed on uv.lock.
+    - uses: astral-sh/setup-uv@v6
+      with:
+        enable-cache: true
+
+    # --locked fails if uv.lock is out of date with pyproject.toml (≈ `npm ci`).
+    - shell: bash
+      run: uv sync --locked
+
+    # .env is gitignored, so CI recreates it. Everything that needs environment
+    # config — pytest (via Settings), docker compose, k6 — reads this one file.
+    - shell: bash
+      env:
+        TEST_USER_PASSWORD: ${{ inputs.test-user-password }}
+      run: |
+        {
+          echo 'JUICE_SHOP_PORT=3000'
+          echo 'BASE_URL=http://localhost:3000'
+          echo "TEST_USER_PASSWORD=${TEST_USER_PASSWORD}"
+        } > .env

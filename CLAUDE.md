@@ -50,9 +50,9 @@ idiomatic Python by porting the TS project one slice at a time.
   is **ignored for now**. Port it as-is.
 
 ## Current status
-Lessons 1–7 are done (7 was split into 7a/7b). All TS specs are ported except
-`api/basket/concurrency.spec.ts` (Lesson 8, also `@smoke`). Flagged TS issue #7 (over-broad `mat-card`)
-deferred to Lesson 9. Next: **Lesson 8 — Real concurrency** (R1). Open it by re-asking the
+Lessons 1–7, 9, 10, 11 are done (interview-MVP mode: Claude writes, user reviews). All TS specs are
+ported except `api/basket/concurrency.spec.ts`. Flagged TS issue #7 fixed in Lesson 9. CI workflows are
+YAML-validated but not yet run on GitHub. Next: **Lesson 8 — Real concurrency** (R1), if time allows. Open it by re-asking the
 weak questions listed in `LEARNING_LOG.md`. Don't start until the user says so.
 
 ## Project conventions carried over from the TS project

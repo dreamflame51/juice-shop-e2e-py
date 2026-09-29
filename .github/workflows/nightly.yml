@@ -1,0 +1,129 @@
+name: Nightly
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    # Sharding (R11): one job per layer instead of pytest-split — zero extra deps and no
+    # durations file to maintain; xdist parallelises inside each job.
+    name: Full suite (${{ matrix.layer }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        layer: [api, ui]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+        with:
+          test-user-password: ${{ secrets.TEST_USER_PASSWORD }}
+      - if: matrix.layer == 'ui'
+        run: uv run playwright install --with-deps chromium
+      # A fresh SUT per job also means fresh product stock (checkouts drain it).
+      - run: docker compose up -d --wait
+      - run: uv run pytest tests/${{ matrix.layer }} -n auto --reruns 2
+      - if: always()
+        run: docker compose down -v
+      - name: Upload this shard's raw results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-${{ matrix.layer }}
+          path: allure-results/
+          retention-days: 7
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces-${{ matrix.layer }}
+          path: test-results/
+          retention-days: 7
+
+  perf:
+    name: k6 checkout load
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+        with:
+          test-user-password: ${{ secrets.TEST_USER_PASSWORD }}
+      - run: docker compose up -d --wait
+      - uses: grafana/setup-k6-action@v1
+      # Thresholds in the script are the gate — a non-zero exit fails the job.
+      # `set -a` exports every .env key so the script sees them as __ENV (TS: dotenv-cli).
+      - run: set -a && . ./.env && set +a && k6 run tests/perf/checkout.js
+      - if: always()
+        run: docker compose down -v
+      - name: Upload k6 summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: k6-summary
+          path: |
+            perf-summary.json
+            perf-summary.html
+          retention-days: 30
+
+  report:
+    name: Allure report
+    needs: [test, perf]
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Merge shard results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: allure-results-*
+          merge-multiple: true
+          path: allure-results
+
+      # Restored before generation and saved after, so the report keeps its
+      # trend and flaky history from the first run onwards.
+      - name: Restore Allure history
+        uses: actions/cache/restore@v4
+        with:
+          path: allure-history
+          key: allure-history-${{ github.run_id }}
+          restore-keys: allure-history-
+
+      - run: npx --yes allure@3.14.3 generate allure-results
+
+      - name: Save Allure history
+        uses: actions/cache/save@v4
+        with:
+          path: allure-history
+          key: allure-history-${{ github.run_id }}
+
+      - name: Download k6 summary
+        uses: actions/download-artifact@v4
+        with:
+          name: k6-summary
+          path: k6-summary
+
+      - name: Embed k6 report into Pages site
+        run: |
+          mkdir -p allure-report/perf
+          cp k6-summary/perf-summary.html allure-report/perf/index.html
+          cp k6-summary/perf-summary.json allure-report/perf/perf-summary.json
+
+      - name: Deploy report to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          keep_files: true
+
+      - name: Link reports in job summary
+        run: |
+          echo "### 📊 [Allure report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/)" >> "$GITHUB_STEP_SUMMARY"
+          echo "### ⚡ [k6 checkout load report](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/perf/)" >> "$GITHUB_STEP_SUMMARY"

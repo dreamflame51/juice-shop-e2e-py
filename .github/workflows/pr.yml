@@ -1,0 +1,100 @@
+name: PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:
+
+concurrency:
+  group: pr-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static:
+    name: Lint, format & typecheck
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+        with:
+          test-user-password: ${{ secrets.TEST_USER_PASSWORD }}
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pyright
+      # ruff can't ban a method call (R6), so hardcoded waits are rejected with a plain grep.
+      - name: Ban hardcoded waits
+        run: |
+          if grep -rnE 'wait_for_timeout|time\.sleep' src tests; then
+            echo "::error::Hardcoded waits are banned — use a web-first assertion or an explicit wait."
+            exit 1
+          fi
+
+  smoke:
+    name: Smoke suite
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+        with:
+          test-user-password: ${{ secrets.TEST_USER_PASSWORD }}
+      - run: uv run playwright install --with-deps chromium
+      - name: Start the SUT
+        run: docker compose up -d --wait
+      # -n auto overrides the local `-n 4` from addopts; --reruns 2 ≈ TS `retries: CI ? 2 : 0`.
+      - run: uv run pytest -m smoke -n auto --reruns 2
+      - name: Stop the SUT
+        if: always()
+        run: docker compose down -v
+      - name: Upload Playwright traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7
+
+      - uses: actions/setup-node@v4
+        if: always()
+        with:
+          node-version: 22
+      - name: Generate Allure report
+        if: always()
+        run: npx --yes allure@3.14.3 generate allure-results
+
+      - name: Deploy Allure preview to gh-pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          destination_dir: pr-preview/${{ github.event.pull_request.number }}
+          keep_files: true
+
+      - name: Link report in job summary
+        if: always()
+        run: echo "### 📊 [Allure report preview](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/${{ github.event.pull_request.number }}/)" >> "$GITHUB_STEP_SUMMARY"
+
+  cleanup-preview:
+    name: Remove Allure preview
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - name: Delete PR preview folder
+        run: |
+          rm -rf "pr-preview/${{ github.event.pull_request.number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Remove Allure preview for PR #${{ github.event.pull_request.number }}"
+            git push
+          fi

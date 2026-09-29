@@ -331,3 +331,16 @@ Mode switch (interview MVP, ~4h left): Claude writes, the user reviews and asks 
 - Allure 3 HTML via `npx allure@3.14.3 generate allure-results`; `allurerc.mjs` exports a plain object
   (no `defineConfig` import → no node_modules needed).
 - Kept parity: login/register Request attachments include the password (same as TS). Candidate hardening.
+- Versions: allure-pytest is 2.x (latest 2.16.2); "3" is the Allure Report generator (and allure-js).
+  They meet at the allure-results JSON format.
+
+## Lesson 11 — CI + README (2026-09-29)
+
+- Composite action `.github/actions/setup`: `astral-sh/setup-uv` (cache keyed on `uv.lock`),
+  `uv sync --locked` (≈ `npm ci`), `.env` materialised from the `TEST_USER_PASSWORD` secret.
+- `pr.yml`: ruff/format/pyright + grep ban on `wait_for_timeout|time.sleep` (R6); smoke on a fresh SUT with
+  `-n auto --reruns 2` (CLI overrides addopts `-n 4`); traces uploaded on failure; Allure preview on gh-pages.
+- `nightly.yml`: sharding (R11) decided as a matrix by layer (`api`/`ui`) — zero deps, no durations file,
+  xdist inside each job; k6 job (`set -a; . ./.env` replaces dotenv-cli); merged report + history cache.
+- README for reviewers: stack with reasons, quick start, commands, layout, design decisions, flagged TS issues.
+- Not verifiable locally: workflows were YAML-validated only; first real run happens on push.
