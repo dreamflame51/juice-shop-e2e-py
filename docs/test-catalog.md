@@ -82,3 +82,14 @@ Epic: `API: Shopping`
 | `test_rejects_adding_items_to_another_users_basket` | Security | `session` (victim, API-registered + logged in); `attacker` (module fixture: a second user registered + logged in with its own client; inline in TS) | Attacker calls `add_to_basket_raw` against the victim's `basket_id` → assert `401` |
 | `test_does_not_let_another_user_read_a_victims_basket_contents` | Security | `api` + `session` (victim); `attacker` | Victim adds an item to their own basket → attacker calls `get_basket_raw` against the victim's `basket_id` → asserts `403` (documents expected-secure behaviour; `xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` with the victim's basket) |
 | `test_does_not_let_another_user_check_out_a_victims_basket` | Security | `api` + `session` (victim); `attacker`, who creates their own address/card | Victim adds an item to their own basket → attacker calls `checkout_raw` against the victim's `basket_id` with the attacker's own address/card → asserts `403` (`xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` and completes the order) |
+
+## Perf (k6)
+
+### `tests/perf/checkout.js`
+Copied unchanged from the TS project (k6 is JS by design, not a porting target). Nightly only, run
+outside pytest against the Dockerized SUT; `.env` is exported so the script sees `__ENV.BASE_URL` /
+`__ENV.TEST_USER_PASSWORD`.
+
+| Scenario | Steps | Thresholds |
+|---|---|---|
+| Stateful checkout under ramping load (0→10→0 VUs over ~2m) | Register → login → think time → add to basket (spread across in-stock SKUs) → think time → create address + card → checkout → record `checkout_duration` | `http_req_failed` rate < 1%, `http_req_duration` p95 < 250ms, `checkout_duration` p95 < 300ms, checks rate > 99% |
