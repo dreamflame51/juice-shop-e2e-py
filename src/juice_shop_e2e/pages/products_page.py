@@ -6,7 +6,9 @@ from playwright.sync_api import Locator, Page
 class ProductsPage:
     def __init__(self, page: Page) -> None:
         self._page = page
-        self.product_cards = page.locator("mat-card")
+        # Scoped to the product grid: a bare `mat-card` also matches Juice Shop's
+        # "challenge solved" notification (flagged TS issue #7).
+        self.product_cards = page.locator("mat-grid-tile mat-card")
         self._search_toggle = page.locator(".mat-search_icon-search")
         self._search_input = page.locator(".mat-search_field input")
         self.no_results_message = page.get_by_text("No results found")

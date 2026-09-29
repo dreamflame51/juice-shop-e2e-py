@@ -301,3 +301,18 @@ client `get_basket(_raw)`, `create_address`, `create_card`, `checkout(_raw)` + r
 - Why `attacker` can't mask a broken setup: said "xfail only applies inside the test" (it covers setup too;
   it's the `raises` filter).
 - String vs `re.compile` in `to_have_url`: thought string = substring and `re.compile` "escapes" (reversed).
+
+## Lesson 9 — Parallelism + retries (2026-09-29)
+
+Mode switch (interview MVP, ~4h left): Claude writes, the user reviews and asks "why".
+
+- `pytest-xdist` (`-n 4`): workers are processes (≈ Playwright Test workers); session fixtures run per worker.
+  Measured: serial 21.2s, `-n 4` 16.6s, `-n auto` (16) 26.5s → more workers ≠ faster (one browser each).
+- `pytest-timeout` (`timeout = 45`, seconds) ≈ TS `timeout: 45_000`.
+- `pytest-rerunfailures`: CI-only `--reruns 2` ≈ TS `retries: CI ? 2 : 0` (no reruns locally, so flakes stay visible).
+- `--tracing retain-on-failure` (superset of TS `on-first-retry`, R5), screenshots/videos on failure → `test-results/`.
+- Flagged TS issue #7 fixed: `mat-grid-tile mat-card` (verified with a DOM probe; the challenge notification lives
+  outside the grid). Parallel sessions all receive the broadcast notification, so xdist made the flake likelier.
+- Shared-SUT state: repeated checkouts drained Apple Juice stock → `400 out of stock` in 8 tests. Fix: restart the
+  SUT (Juice Shop re-seeds on start); CI always starts a fresh container. Stock check precedes the auth check,
+  so the isolation test saw 400 instead of 401.

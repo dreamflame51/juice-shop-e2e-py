@@ -23,6 +23,9 @@ dev = [
     "pyright>=1.1.414",
     "pytest>=9.1.1",
     "pytest-playwright>=0.9.0",
+    "pytest-rerunfailures>=16.7",
+    "pytest-timeout>=2.4.0",
+    "pytest-xdist>=3.8.0",
     "ruff>=0.16.9",
 ]
 
@@ -49,6 +52,19 @@ strict = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = ["--import-mode=importlib", "--strict-markers"]
-
+addopts = [
+    "--import-mode=importlib",
+    "--strict-markers",
+    # TS fullyParallel (xdist). 4 workers measured fastest locally for this suite (16 workers
+    # were slower than serial: one browser per worker). CI overrides with `-n auto`.
+    # Use `-n 0` to debug serially.
+    "-n", "4",
+    # TS trace: 'on-first-retry' has no pytest-playwright equivalent; this is a superset (R5).
+    "--tracing", "retain-on-failure",
+    "--screenshot", "only-on-failure",
+    "--video", "retain-on-failure",
+]
+# TS timeout: 45_000 per test (pytest-timeout, seconds).
+# TS retries: CI ? 2 : 0 -> CI passes `--reruns 2` (pytest-rerunfailures); none locally.
+timeout = 45
 markers = ["smoke: fast critical-path subset (run with -m smoke)"]
