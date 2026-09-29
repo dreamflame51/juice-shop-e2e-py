@@ -1,5 +1,6 @@
 name: Nightly
 
+# Full regression: every layer, k6 load, merged Allure report with history on gh-pages.
 on:
   schedule:
     - cron: '0 2 * * *'
