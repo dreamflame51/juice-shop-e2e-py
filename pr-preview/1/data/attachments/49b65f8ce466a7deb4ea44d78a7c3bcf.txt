@@ -1,2 +1,0 @@
-201 http://localhost:3000/api/Addresss/
-{"status":"success","data":{"id":7,"fullName":"Nicholas James","mobileNum":2481348505,"zipCode":"66564","streetAddress":"40502 Garrett Island","city":"Johnsonhaven","state":"Ohio","country":"Central African Republic","UserId":23,"updatedAt":"2026-09-29T16:29:51.007Z","createdAt":"2026-09-29T16:29:51.007Z"}}

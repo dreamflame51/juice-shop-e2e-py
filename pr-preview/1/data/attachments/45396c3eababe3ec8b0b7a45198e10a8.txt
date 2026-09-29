@@ -1,2 +1,0 @@
-201 http://localhost:3000/api/Cards/
-{"status":"success","data":{"id":8,"fullName":"Jason Miller","cardNum":4671127850231111,"expMonth":8,"expYear":2092,"UserId":24,"updatedAt":"2026-09-29T16:29:54.533Z","createdAt":"2026-09-29T16:29:54.533Z"}}
