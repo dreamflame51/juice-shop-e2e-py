@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":26,"email":"shawn97.ybrxuzwh@e2e.test","updatedAt":"2026-09-29T17:31:16.870Z","createdAt":"2026-09-29T17:31:16.870Z","deletedAt":null}}

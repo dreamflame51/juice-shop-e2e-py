@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jeffrey Hanson","mobileNum":7150747013,"zipCode":"43750","streetAddress":"7159 Burns Rest","city":"Johntown","state":"Utah","country":"British Indian Ocean Territory (Chagos Archipelago)","UserId":22,"updatedAt":"2026-09-29T17:31:16.357Z","createdAt":"2026-09-29T17:31:16.357Z"}}
