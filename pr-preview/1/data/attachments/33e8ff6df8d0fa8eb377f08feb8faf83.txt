@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Melissa Roberts","mobileNum":3050813768,"zipCode":"77343","streetAddress":"9688 Phillips Pike","city":"South Andrea","state":"Nebraska","country":"Kuwait","UserId":24,"updatedAt":"2026-09-29T16:29:53.872Z","createdAt":"2026-09-29T16:29:53.872Z"}}
