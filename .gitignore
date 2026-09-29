@@ -15,3 +15,8 @@ allure-history/
 test-results/
 .deepeval/
 perf-summary.*
+
+# Local learning notes (not part of the project)
+CLAUDE.md
+LEARNING_LOG.md
+PORTING_PLAN.md

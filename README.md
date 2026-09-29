@@ -6,8 +6,7 @@ written in **Python 3.12 + pytest + Playwright**, reported through **Allure 3** 
 
 It is a deliberate, test-for-test port of a TypeScript/Playwright suite: same SUT, same `.env`, same
 coverage and assertions — rebuilt with idiomatic Python rather than translated line by line.
-Every test is listed in the **[test catalog](docs/test-catalog.md)**; the port's design notes live in
-**[PORTING_PLAN.md](PORTING_PLAN.md)**.
+Every test is listed in the **[test catalog](docs/test-catalog.md)**.
 
 ## Stack
 
@@ -94,7 +93,7 @@ tests/
 
 ## Flagged TypeScript issues
 
-Ported faithfully and documented instead of silently "fixed" (details in [PORTING_PLAN.md](PORTING_PLAN.md) §7):
+Ported faithfully and documented instead of silently "fixed":
 duplicate `category` label in the API checkout spec (#1), weak `/1/` quantity regex (#2), inherently flaky
 concurrency xfail (#3), inline locator in a spec (#4), catch-all retry in `clickUntilVisible` (#6, narrowed to
 timeouts here). **#7 was fixed**: a bare `mat-card` locator also matched Juice Shop's "challenge solved"
@@ -112,4 +111,4 @@ Required secret: `TEST_USER_PASSWORD`.
 ## Status
 
 All TypeScript specs are ported except `api/basket/concurrency.spec.ts` (5 truly concurrent requests; sync
-Playwright objects are thread-bound, so it needs an `asyncio` or thread-pool helper — risk R1 in the plan).
+Playwright objects are thread-bound, so it needs an `asyncio` or thread-pool helper).

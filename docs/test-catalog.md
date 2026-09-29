@@ -2,7 +2,7 @@
 
 Tracks every test in the suite: what it covers, the fixtures it relies on, the steps,
 and the layer/category it's tagged with in Allure. Update this file whenever a test is
-added, removed, or its scenario changes (project rule, see [CLAUDE.md](../CLAUDE.md)).
+added, removed, or its scenario changes.
 
 Legend: **Layer** = UI / API (Allure `parentSuite`, derived from the directory).
 **Category** = Allure `category` label (Functional / Security / Performance).
