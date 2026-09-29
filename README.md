@@ -33,7 +33,7 @@ for the Allure HTML generator).
 ```powershell
 uv sync                                   # creates .venv, installs Python 3.12 + deps from uv.lock
 uv run playwright install chromium
-Copy-Item .env.example .env               # then set TEST_USER_PASSWORD
+create local .env file                    # then set TEST_USER_PASSWORD
 docker compose up -d --wait               # start Juice Shop, wait for healthy
 uv run pytest
 ```
