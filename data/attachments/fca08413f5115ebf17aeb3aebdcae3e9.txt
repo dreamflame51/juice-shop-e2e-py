@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Jennifer Ingram","mobileNum":298583350,"zipCode":"53862","streetAddress":"3654 Michelle Trace","city":"North Chelsea","state":"Utah","country":"New Zealand","UserId":30,"updatedAt":"2026-09-30T07:43:09.481Z","createdAt":"2026-09-30T07:43:09.481Z"}}

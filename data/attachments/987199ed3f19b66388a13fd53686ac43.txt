@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Gabriel Bryant","mobileNum":5292342503,"zipCode":"42146","streetAddress":"59138 Susan Loaf","city":"Lake Brandonborough","state":"Oklahoma","country":"Korea","UserId":22,"updatedAt":"2026-09-30T07:43:42.288Z","createdAt":"2026-09-30T07:43:42.288Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":28,"email":"tcervantes.jxrpvgcj@e2e.test","updatedAt":"2026-09-30T07:43:09.338Z","createdAt":"2026-09-30T07:43:09.338Z","deletedAt":null}}

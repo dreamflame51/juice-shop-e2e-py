@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Thomas Stein","mobileNum":8629015329,"zipCode":"38274","streetAddress":"14109 Ross Harbor","city":"New Heatherside","state":"Pennsylvania","country":"Greece","UserId":25,"updatedAt":"2026-09-30T07:43:09.288Z","createdAt":"2026-09-30T07:43:09.288Z"}}

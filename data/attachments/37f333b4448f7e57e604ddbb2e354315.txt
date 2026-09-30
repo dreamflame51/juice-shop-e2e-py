@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Christopher Miller","mobileNum":5317512197,"zipCode":"40647","streetAddress":"89474 Katie Square","city":"East Carlosfort","state":"Idaho","country":"Serbia","UserId":23,"updatedAt":"2026-09-30T07:43:09.201Z","createdAt":"2026-09-30T07:43:09.201Z"}}
