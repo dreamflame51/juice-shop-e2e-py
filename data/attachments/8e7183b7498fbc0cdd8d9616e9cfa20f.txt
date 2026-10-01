@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Nicole Wallace","mobileNum":3666762321,"zipCode":"55509","streetAddress":"17914 Webb Park Apt. 488","city":"Kennethmouth","state":"Pennsylvania","country":"Ghana","UserId":22,"updatedAt":"2026-10-01T08:13:21.411Z","createdAt":"2026-10-01T08:13:21.411Z"}}

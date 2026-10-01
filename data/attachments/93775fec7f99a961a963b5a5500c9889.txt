@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Melanie Rodriguez","cardNum":4174552079061111,"expMonth":4,"expYear":2083,"UserId":22,"updatedAt":"2026-10-01T08:13:21.722Z","createdAt":"2026-10-01T08:13:21.722Z"}}

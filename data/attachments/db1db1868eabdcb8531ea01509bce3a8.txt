@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jerry Bennett","mobileNum":2226626036,"zipCode":"65632","streetAddress":"5785 Small Cove","city":"Melissaport","state":"Mississippi","country":"Bulgaria","UserId":23,"updatedAt":"2026-10-01T08:01:55.589Z","createdAt":"2026-10-01T08:01:55.589Z"}}

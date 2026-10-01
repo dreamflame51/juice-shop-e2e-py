@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Todd Welch","mobileNum":8374105563,"zipCode":"83930","streetAddress":"1798 Bishop Mews Apt. 755","city":"South Stephanieburgh","state":"New York","country":"Saint Helena","UserId":25,"updatedAt":"2026-10-01T08:01:55.743Z","createdAt":"2026-10-01T08:01:55.743Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Mandy Perry","mobileNum":815050600,"zipCode":"98073","streetAddress":"6127 Travis Forest","city":"West Petermouth","state":"Delaware","country":"Montserrat","UserId":29,"updatedAt":"2026-10-01T08:01:56.079Z","createdAt":"2026-10-01T08:01:56.079Z"}}

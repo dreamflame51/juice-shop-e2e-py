@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":23,"email":"christophermontgomery.ewxrgviz@e2e.test","updatedAt":"2026-10-01T08:01:55.327Z","createdAt":"2026-10-01T08:01:55.327Z","deletedAt":null}}
