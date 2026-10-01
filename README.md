@@ -87,6 +87,9 @@ tests/
 - **Validation at the boundary.** pydantic models parse every response and encode SUT rules
   (5-digit zip, 16-digit card, `expYear` ≥ 2080), so a broken factory fails fast with a precise message.
 - **Every API call is an Allure step** with request/response attachments (`JuiceShopClient._call`).
+- **Real concurrency without async.** Sync Playwright objects are bound to their thread, so the basket
+  race test fires its 5 requests with stdlib `urllib` from a thread pool, released together by a
+  `threading.Barrier` (threads overlap on socket I/O because the GIL is released there). Zero new deps.
 - **Parallelism is measured, not assumed.** Locally 4 workers were fastest (16 were slower than serial:
   one browser per worker). CI uses `-n auto` and `--reruns 2`; no reruns locally so flakes stay visible.
 - **No hardcoded waits.** Web-first `expect` for UI; a CI grep bans `wait_for_timeout` / `time.sleep`.
@@ -110,5 +113,4 @@ Required secret: `TEST_USER_PASSWORD`.
 
 ## Status
 
-All TypeScript specs are ported except `api/basket/concurrency.spec.ts` (5 truly concurrent requests; sync
-Playwright objects are thread-bound, so it needs an `asyncio` or thread-pool helper).
+All TypeScript specs are ported.
