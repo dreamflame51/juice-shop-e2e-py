@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Larry Matthews","mobileNum":3778425293,"zipCode":"08181","streetAddress":"0930 Adams Ports","city":"Davenportport","state":"Wisconsin","country":"Brunei Darussalam","UserId":25,"updatedAt":"2026-10-01T02:39:09.344Z","createdAt":"2026-10-01T02:39:09.344Z"}}

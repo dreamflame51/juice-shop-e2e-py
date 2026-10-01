@@ -1,0 +1,1 @@
+{"id":"085de669bded87979d5550d124efaf06","fullName":"tests.api.basket.test_concurrency#test_concurrent_adds_of_the_same_product_are_not_lost","name":"test_concurrent_adds_of_the_same_product_are_not_lost","status":"skipped","testResultsByEnv":{"default":"a85a6ff42c686e4fd4530b97b7a0bda8"}}

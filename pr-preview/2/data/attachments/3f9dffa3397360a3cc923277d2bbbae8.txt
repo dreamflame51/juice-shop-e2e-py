@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Bryan Mccarty","mobileNum":8095839138,"zipCode":"42282","streetAddress":"853 James Square","city":"Josephburgh","state":"Florida","country":"Senegal","UserId":24,"updatedAt":"2026-10-01T02:39:07.044Z","createdAt":"2026-10-01T02:39:07.044Z"}}
