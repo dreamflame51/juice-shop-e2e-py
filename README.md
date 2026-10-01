@@ -6,8 +6,7 @@ written in **Python 3.12 + pytest + Playwright**, reported through **Allure 3** 
 
 It is a deliberate, test-for-test port of a TypeScript/Playwright suite: same SUT, same `.env`, same
 coverage and assertions — rebuilt with idiomatic Python rather than translated line by line.
-Every test is listed in the **[test catalog](docs/test-catalog.md)**; the port's design notes live in
-**[PORTING_PLAN.md](PORTING_PLAN.md)**.
+Every test is listed in the **[test catalog](docs/test-catalog.md)**.
 
 ## Stack
 
@@ -88,13 +87,16 @@ tests/
 - **Validation at the boundary.** pydantic models parse every response and encode SUT rules
   (5-digit zip, 16-digit card, `expYear` ≥ 2080), so a broken factory fails fast with a precise message.
 - **Every API call is an Allure step** with request/response attachments (`JuiceShopClient._call`).
+- **Real concurrency without async.** Sync Playwright objects are bound to their thread, so the basket
+  race test fires its 5 requests with stdlib `urllib` from a thread pool, released together by a
+  `threading.Barrier` (threads overlap on socket I/O because the GIL is released there). Zero new deps.
 - **Parallelism is measured, not assumed.** Locally 4 workers were fastest (16 were slower than serial:
   one browser per worker). CI uses `-n auto` and `--reruns 2`; no reruns locally so flakes stay visible.
 - **No hardcoded waits.** Web-first `expect` for UI; a CI grep bans `wait_for_timeout` / `time.sleep`.
 
 ## Flagged TypeScript issues
 
-Ported faithfully and documented instead of silently "fixed" (details in [PORTING_PLAN.md](PORTING_PLAN.md) §7):
+Ported faithfully and documented instead of silently "fixed":
 duplicate `category` label in the API checkout spec (#1), weak `/1/` quantity regex (#2), inherently flaky
 concurrency xfail (#3), inline locator in a spec (#4), catch-all retry in `clickUntilVisible` (#6, narrowed to
 timeouts here). **#7 was fixed**: a bare `mat-card` locator also matched Juice Shop's "challenge solved"
@@ -111,5 +113,4 @@ Required secret: `TEST_USER_PASSWORD`.
 
 ## Status
 
-All TypeScript specs are ported except `api/basket/concurrency.spec.ts` (5 truly concurrent requests; sync
-Playwright objects are thread-bound, so it needs an `asyncio` or thread-pool helper — risk R1 in the plan).
+All TypeScript specs are ported.

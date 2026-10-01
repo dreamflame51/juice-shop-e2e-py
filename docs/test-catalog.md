@@ -2,7 +2,7 @@
 
 Tracks every test in the suite: what it covers, the fixtures it relies on, the steps,
 and the layer/category it's tagged with in Allure. Update this file whenever a test is
-added, removed, or its scenario changes (project rule, see [CLAUDE.md](../CLAUDE.md)).
+added, removed, or its scenario changes.
 
 Legend: **Layer** = UI / API (Allure `parentSuite`, derived from the directory).
 **Category** = Allure `category` label (Functional / Security / Performance).
@@ -82,6 +82,13 @@ Epic: `API: Shopping`
 | `test_rejects_adding_items_to_another_users_basket` | Security | `session` (victim, API-registered + logged in); `attacker` (module fixture: a second user registered + logged in with its own client; inline in TS) | Attacker calls `add_to_basket_raw` against the victim's `basket_id` → assert `401` |
 | `test_does_not_let_another_user_read_a_victims_basket_contents` | Security | `api` + `session` (victim); `attacker` | Victim adds an item to their own basket → attacker calls `get_basket_raw` against the victim's `basket_id` → asserts `403` (documents expected-secure behaviour; `xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` with the victim's basket) |
 | `test_does_not_let_another_user_check_out_a_victims_basket` | Security | `api` + `session` (victim); `attacker`, who creates their own address/card | Victim adds an item to their own basket → attacker calls `checkout_raw` against the victim's `basket_id` with the attacker's own address/card → asserts `403` (`xfail(strict=True, raises=AssertionError)` since the known-vulnerable SUT returns `200` and completes the order) |
+
+### `tests/api/basket/test_concurrency.py` — Basket concurrency
+Epic: `API: Shopping`
+
+| Test | Category | Fixtures | Steps |
+|---|---|---|---|
+| `smoke` `test_concurrent_adds_of_the_same_product_are_not_lost` | Functional | `api` + `session` (registers + logs in a user); `base_url` (the raw requests bypass Playwright) | Fire 5 identical `POST /api/BasketItems/` (qty 1) at once via `post_json_concurrently` (stdlib `urllib` threads released by a barrier: sync Playwright can't be shared across threads, R1) → assert all 200 → assert basket quantities sum to 5 (`xfail(strict=True, raises=AssertionError)`: the SUT races on the "row exists" check, 1 × 200 + 4 × 500; non-deterministic in theory, flagged TS issue #3) |
 
 ## Perf (k6)
 
