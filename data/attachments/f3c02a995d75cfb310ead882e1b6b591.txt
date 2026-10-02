@@ -1,0 +1,2 @@
+200 http://localhost:3000/rest/basket/7
+{"status":"success","data":{"id":7,"coupon":null,"UserId":23,"createdAt":"2026-10-02T07:44:43.173Z","updatedAt":"2026-10-02T07:44:43.173Z","Products":[]}}

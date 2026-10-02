@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Candice Mooney","cardNum":4292914186281111,"expMonth":3,"expYear":2098,"UserId":29,"updatedAt":"2026-10-02T07:44:43.535Z","createdAt":"2026-10-02T07:44:43.535Z"}}

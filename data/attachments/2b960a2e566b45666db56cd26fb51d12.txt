@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Francisco Flowers","mobileNum":782639433,"zipCode":"22879","streetAddress":"927 Smith Walks","city":"Evansville","state":"Vermont","country":"Niger","UserId":23,"updatedAt":"2026-10-02T07:44:43.225Z","createdAt":"2026-10-02T07:44:43.225Z"}}
