@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kelly Reyes","mobileNum":7243270531,"zipCode":"86915","streetAddress":"84052 Tamara Mall Suite 164","city":"West Shawnport","state":"Arkansas","country":"United States Virgin Islands","UserId":22,"updatedAt":"2026-10-03T07:19:10.511Z","createdAt":"2026-10-03T07:19:10.511Z"}}

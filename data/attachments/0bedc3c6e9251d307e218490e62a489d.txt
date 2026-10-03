@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Janet Flores","mobileNum":8192449076,"zipCode":"82713","streetAddress":"0452 Miller Estate","city":"South Frankton","state":"Ohio","country":"United States Virgin Islands","UserId":25,"updatedAt":"2026-10-03T07:18:51.956Z","createdAt":"2026-10-03T07:18:51.956Z"}}

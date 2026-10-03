@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Vanessa Dillon","mobileNum":5744897010,"zipCode":"61387","streetAddress":"33719 Heather Streets Apt. 946","city":"East Christy","state":"South Carolina","country":"Korea","UserId":23,"updatedAt":"2026-10-03T07:18:51.860Z","createdAt":"2026-10-03T07:18:51.860Z"}}

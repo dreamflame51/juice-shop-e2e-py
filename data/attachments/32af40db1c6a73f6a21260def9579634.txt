@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Daniel Cole","cardNum":4524164867051111,"expMonth":1,"expYear":2082,"UserId":23,"updatedAt":"2026-10-03T07:18:51.914Z","createdAt":"2026-10-03T07:18:51.914Z"}}

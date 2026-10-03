@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Andrew Martinez","mobileNum":6968724799,"zipCode":"72791","streetAddress":"5329 Johnson Station Apt. 520","city":"West Jonathanmouth","state":"Delaware","country":"Central African Republic","UserId":29,"updatedAt":"2026-10-03T07:18:52.192Z","createdAt":"2026-10-03T07:18:52.192Z"}}
