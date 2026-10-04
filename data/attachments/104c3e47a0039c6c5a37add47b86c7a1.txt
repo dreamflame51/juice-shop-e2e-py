@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Michelle Santiago","mobileNum":5916527756,"zipCode":"22212","streetAddress":"5644 David Lodge","city":"West Johnview","state":"Rhode Island","country":"Guam","UserId":25,"updatedAt":"2026-10-04T07:35:01.569Z","createdAt":"2026-10-04T07:35:01.569Z"}}

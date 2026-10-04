@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Erica Walters","mobileNum":1570268688,"zipCode":"35196","streetAddress":"8055 Mosley Branch Suite 796","city":"Heatherton","state":"California","country":"Korea","UserId":22,"updatedAt":"2026-10-04T07:35:38.231Z","createdAt":"2026-10-04T07:35:38.231Z"}}

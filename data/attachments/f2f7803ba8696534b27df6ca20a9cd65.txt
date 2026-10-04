@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Caitlin Schroeder","cardNum":4343894212601111,"expMonth":1,"expYear":2085,"UserId":29,"updatedAt":"2026-10-04T07:35:01.803Z","createdAt":"2026-10-04T07:35:01.803Z"}}
