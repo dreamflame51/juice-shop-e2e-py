@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Scott Rivera","mobileNum":2223666847,"zipCode":"15148","streetAddress":"25005 Jones Highway","city":"Nicolemouth","state":"Arkansas","country":"Iraq","UserId":29,"updatedAt":"2026-10-05T07:56:40.508Z","createdAt":"2026-10-05T07:56:40.508Z"}}

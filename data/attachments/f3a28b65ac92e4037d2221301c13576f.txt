@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Steven Richardson","mobileNum":3658441178,"zipCode":"59431","streetAddress":"88811 Michael Haven","city":"Port Meghan","state":"New York","country":"Iraq","UserId":22,"updatedAt":"2026-10-05T07:57:08.840Z","createdAt":"2026-10-05T07:57:08.840Z"}}

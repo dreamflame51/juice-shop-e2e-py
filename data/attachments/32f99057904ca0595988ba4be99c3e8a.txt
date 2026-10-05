@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Matthew Walker","mobileNum":4880542930,"zipCode":"24640","streetAddress":"6037 King Pass","city":"West Michael","state":"Oregon","country":"San Marino","UserId":22,"updatedAt":"2026-10-05T07:56:40.066Z","createdAt":"2026-10-05T07:56:40.066Z"}}

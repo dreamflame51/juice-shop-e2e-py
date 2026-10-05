@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Sherry Stewart","mobileNum":8973144979,"zipCode":"69639","streetAddress":"21678 Boyd Roads Apt. 760","city":"Lake Brent","state":"Arizona","country":"Uzbekistan","UserId":25,"updatedAt":"2026-10-05T07:56:40.221Z","createdAt":"2026-10-05T07:56:40.221Z"}}
