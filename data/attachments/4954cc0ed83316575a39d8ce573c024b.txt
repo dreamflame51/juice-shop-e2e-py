@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Brandon Lozano","mobileNum":8312652911,"zipCode":"34505","streetAddress":"29417 Becker Cape","city":"Calebberg","state":"Indiana","country":"Kyrgyz Republic","UserId":29,"updatedAt":"2026-10-06T08:19:24.263Z","createdAt":"2026-10-06T08:19:24.263Z"}}

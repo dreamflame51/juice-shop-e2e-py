@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Lauren King","mobileNum":6213724531,"zipCode":"08541","streetAddress":"1056 Angela Hills","city":"Sheltonton","state":"New Mexico","country":"Svalbard & Jan Mayen Islands","UserId":25,"updatedAt":"2026-10-06T08:19:24.034Z","createdAt":"2026-10-06T08:19:24.034Z"}}
