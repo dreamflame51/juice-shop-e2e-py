@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Colin Bryan","mobileNum":1936151135,"zipCode":"69772","streetAddress":"1190 Lisa Stream Apt. 870","city":"Port Dawn","state":"New Hampshire","country":"Kenya","UserId":29,"updatedAt":"2026-10-07T07:56:15.602Z","createdAt":"2026-10-07T07:56:15.602Z"}}

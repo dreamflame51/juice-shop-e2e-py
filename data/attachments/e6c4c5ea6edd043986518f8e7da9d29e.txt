@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Tonya Rodriguez","cardNum":4113380057091111,"expMonth":5,"expYear":2087,"UserId":23,"updatedAt":"2026-10-07T07:56:14.468Z","createdAt":"2026-10-07T07:56:14.468Z"}}

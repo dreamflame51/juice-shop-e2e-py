@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Michael Washington","mobileNum":6622914909,"zipCode":"38839","streetAddress":"010 Nelson Prairie Apt. 469","city":"West Saraside","state":"Ohio","country":"Norway","UserId":23,"updatedAt":"2026-10-07T07:56:14.203Z","createdAt":"2026-10-07T07:56:14.203Z"}}
