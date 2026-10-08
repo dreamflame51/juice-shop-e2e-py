@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Heather Horton","mobileNum":6231157763,"zipCode":"80513","streetAddress":"463 Case Avenue","city":"Davidfurt","state":"New Jersey","country":"South Georgia and the South Sandwich Islands","UserId":22,"updatedAt":"2026-10-08T08:11:25.085Z","createdAt":"2026-10-08T08:11:25.085Z"}}

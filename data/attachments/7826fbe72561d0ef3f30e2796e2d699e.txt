@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Eileen Farmer","mobileNum":3259346775,"zipCode":"17756","streetAddress":"2636 Allison Burg Suite 272","city":"Hendricksside","state":"Alaska","country":"Liechtenstein","UserId":29,"updatedAt":"2026-10-08T08:10:57.602Z","createdAt":"2026-10-08T08:10:57.602Z"}}

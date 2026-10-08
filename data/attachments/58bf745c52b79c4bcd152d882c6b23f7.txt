@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Laurie Clay","mobileNum":6657201864,"zipCode":"96985","streetAddress":"10285 Gutierrez Club Apt. 891","city":"East Anthonyborough","state":"Illinois","country":"Guam","UserId":23,"updatedAt":"2026-10-08T08:10:57.221Z","createdAt":"2026-10-08T08:10:57.221Z"}}

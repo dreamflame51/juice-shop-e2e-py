@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Jackson Walton","mobileNum":5721982787,"zipCode":"67949","streetAddress":"009 Grant Locks Apt. 758","city":"Port Debrabury","state":"Maine","country":"Cayman Islands","UserId":25,"updatedAt":"2026-10-08T08:10:57.328Z","createdAt":"2026-10-08T08:10:57.328Z"}}

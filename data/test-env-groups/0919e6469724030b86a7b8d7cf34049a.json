@@ -1,1 +1,1 @@
-{"id":"0919e6469724030b86a7b8d7cf34049a","fullName":"tests.api.auth.test_login#test_issues_a_jwt_and_a_basket_id_for_valid_credentials","name":"test_issues_a_jwt_and_a_basket_id_for_valid_credentials","status":"passed","testResultsByEnv":{"default":"3ff9d51154a92a241b9f916f1de5cc24"}}
+{"id":"0919e6469724030b86a7b8d7cf34049a","fullName":"tests.api.auth.test_login#test_issues_a_jwt_and_a_basket_id_for_valid_credentials","name":"test_issues_a_jwt_and_a_basket_id_for_valid_credentials","status":"passed","testResultsByEnv":{"default":"e1aa47d72b95b027e262f399ae1f2295"}}
