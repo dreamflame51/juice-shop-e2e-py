@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":28,"email":"salinasgina.jebqkhro@e2e.test","updatedAt":"2026-10-09T08:10:55.102Z","createdAt":"2026-10-09T08:10:55.102Z","deletedAt":null}}

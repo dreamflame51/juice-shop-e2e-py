@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Erika Ryan","mobileNum":5343310547,"zipCode":"78428","streetAddress":"0778 Crystal Vista Suite 425","city":"Ryanberg","state":"South Dakota","country":"Iceland","UserId":22,"updatedAt":"2026-10-09T08:11:22.731Z","createdAt":"2026-10-09T08:11:22.731Z"}}

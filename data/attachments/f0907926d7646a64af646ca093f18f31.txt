@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Jennifer Chandler","mobileNum":3858661037,"zipCode":"91419","streetAddress":"16358 Wright Alley Suite 123","city":"Coxborough","state":"Rhode Island","country":"Marshall Islands","UserId":25,"updatedAt":"2026-10-09T08:10:55.068Z","createdAt":"2026-10-09T08:10:55.068Z"}}

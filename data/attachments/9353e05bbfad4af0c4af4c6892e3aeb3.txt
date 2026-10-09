@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Brian Hunt","mobileNum":8393710423,"zipCode":"03747","streetAddress":"724 Stacy Views","city":"New Denise","state":"North Carolina","country":"Croatia","UserId":24,"updatedAt":"2026-10-09T08:10:54.988Z","createdAt":"2026-10-09T08:10:54.988Z"}}
