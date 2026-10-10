@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Nancy Obrien","mobileNum":5349140193,"zipCode":"41387","streetAddress":"84688 Jones Mountain","city":"New Teresa","state":"North Carolina","country":"Timor-Leste","UserId":22,"updatedAt":"2026-10-10T07:55:17.633Z","createdAt":"2026-10-10T07:55:17.633Z"}}

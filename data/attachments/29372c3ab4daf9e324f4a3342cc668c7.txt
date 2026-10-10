@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Bianca Rush","mobileNum":6097246132,"zipCode":"28541","streetAddress":"95785 Jennifer Loop Apt. 197","city":"Fordhaven","state":"Kentucky","country":"Russian Federation","UserId":29,"updatedAt":"2026-10-10T07:54:53.358Z","createdAt":"2026-10-10T07:54:53.358Z"}}

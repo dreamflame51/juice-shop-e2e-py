@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jennifer Harris","mobileNum":1958089866,"zipCode":"17106","streetAddress":"81279 Jay Track","city":"Hallfurt","state":"New Mexico","country":"Cook Islands","UserId":22,"updatedAt":"2026-10-10T07:54:52.880Z","createdAt":"2026-10-10T07:54:52.880Z"}}

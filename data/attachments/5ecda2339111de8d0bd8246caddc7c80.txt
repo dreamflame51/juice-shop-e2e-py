@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":24,"email":"cheryl42.penfybpf@e2e.test","updatedAt":"2026-10-10T07:54:52.675Z","createdAt":"2026-10-10T07:54:52.675Z","deletedAt":null}}

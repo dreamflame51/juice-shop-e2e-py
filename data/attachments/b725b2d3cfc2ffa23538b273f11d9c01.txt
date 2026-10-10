@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Karen Estrada","mobileNum":6383336052,"zipCode":"06380","streetAddress":"14283 Nelson Port Apt. 239","city":"Lake Douglaston","state":"Ohio","country":"Niger","UserId":25,"updatedAt":"2026-10-10T07:54:53.036Z","createdAt":"2026-10-10T07:54:53.036Z"}}
