@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Danielle Johnson","mobileNum":8689490591,"zipCode":"39467","streetAddress":"742 Mosley Green Suite 267","city":"Russellview","state":"Texas","country":"Niger","UserId":24,"updatedAt":"2026-10-11T08:01:33.402Z","createdAt":"2026-10-11T08:01:33.402Z"}}

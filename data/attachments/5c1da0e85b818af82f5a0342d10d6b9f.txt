@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Shawn Wilson","mobileNum":6172737564,"zipCode":"94605","streetAddress":"671 Brett Point Suite 207","city":"North Emmastad","state":"Hawaii","country":"Belarus","UserId":29,"updatedAt":"2026-10-11T08:01:33.797Z","createdAt":"2026-10-11T08:01:33.797Z"}}

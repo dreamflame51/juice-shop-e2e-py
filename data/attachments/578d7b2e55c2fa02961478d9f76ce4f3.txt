@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Tiffany Savage","mobileNum":2785751339,"zipCode":"41161","streetAddress":"30263 Salinas Lock","city":"Reynoldsbury","state":"Oklahoma","country":"Paraguay","UserId":25,"updatedAt":"2026-10-11T08:01:33.459Z","createdAt":"2026-10-11T08:01:33.459Z"}}

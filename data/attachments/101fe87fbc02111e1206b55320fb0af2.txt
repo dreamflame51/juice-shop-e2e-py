@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kathryn Lopez","mobileNum":3028631297,"zipCode":"31450","streetAddress":"5193 Davis Crossing Suite 132","city":"West Joseph","state":"Michigan","country":"Botswana","UserId":22,"updatedAt":"2026-10-11T08:01:53.019Z","createdAt":"2026-10-11T08:01:53.019Z"}}
