@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Briana Gutierrez","cardNum":4983096951131111,"expMonth":5,"expYear":2090,"UserId":22,"updatedAt":"2026-10-13T08:43:40.937Z","createdAt":"2026-10-13T08:43:40.937Z"}}

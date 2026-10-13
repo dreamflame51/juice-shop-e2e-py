@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Dana Crawford","cardNum":4078403156051111,"expMonth":1,"expYear":2090,"UserId":25,"updatedAt":"2026-10-13T08:43:19.608Z","createdAt":"2026-10-13T08:43:19.608Z"}}

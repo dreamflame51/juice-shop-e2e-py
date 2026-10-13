@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Sarah Lee","mobileNum":4558310557,"zipCode":"71932","streetAddress":"25750 Alex Place","city":"Vargasview","state":"Tennessee","country":"Turkmenistan","UserId":29,"updatedAt":"2026-10-13T08:43:19.767Z","createdAt":"2026-10-13T08:43:19.767Z"}}

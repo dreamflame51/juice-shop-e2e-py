@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kimberly Munoz","mobileNum":5933401909,"zipCode":"18510","streetAddress":"66181 Ashley Rapid","city":"Danahaven","state":"Pennsylvania","country":"Venezuela","UserId":25,"updatedAt":"2026-10-13T08:43:19.560Z","createdAt":"2026-10-13T08:43:19.560Z"}}

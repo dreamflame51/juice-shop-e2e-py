@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kelly Sexton","mobileNum":2547335962,"zipCode":"65696","streetAddress":"2644 Simmons Union","city":"Stewartfurt","state":"Utah","country":"Canada","UserId":22,"updatedAt":"2026-10-13T08:43:40.884Z","createdAt":"2026-10-13T08:43:40.884Z"}}
