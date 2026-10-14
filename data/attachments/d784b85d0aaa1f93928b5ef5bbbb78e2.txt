@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Anthony Ford","mobileNum":1709319300,"zipCode":"87356","streetAddress":"317 Bryan Views Suite 555","city":"East Amanda","state":"Nebraska","country":"Zimbabwe","UserId":24,"updatedAt":"2026-10-14T06:54:23.278Z","createdAt":"2026-10-14T06:54:23.278Z"}}

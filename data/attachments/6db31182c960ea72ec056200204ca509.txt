@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Mrs. Deanna Russell PhD","mobileNum":5553927125,"zipCode":"87377","streetAddress":"57142 Farley Road Suite 279","city":"South Elizabeth","state":"Kansas","country":"Guyana","UserId":25,"updatedAt":"2026-10-14T06:54:23.401Z","createdAt":"2026-10-14T06:54:23.401Z"}}

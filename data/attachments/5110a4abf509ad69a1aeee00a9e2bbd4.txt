@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Amy Diaz","mobileNum":1556789044,"zipCode":"84307","streetAddress":"92939 Alejandra Neck","city":"Port Chadstad","state":"California","country":"Greenland","UserId":29,"updatedAt":"2026-10-14T06:54:23.712Z","createdAt":"2026-10-14T06:54:23.712Z"}}
