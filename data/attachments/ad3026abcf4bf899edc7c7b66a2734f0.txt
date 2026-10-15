@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Jeffrey Davis","mobileNum":309156519,"zipCode":"91771","streetAddress":"3155 Charles Ports","city":"Kellerton","state":"Arizona","country":"Uzbekistan","UserId":29,"updatedAt":"2026-10-15T06:43:49.051Z","createdAt":"2026-10-15T06:43:49.051Z"}}

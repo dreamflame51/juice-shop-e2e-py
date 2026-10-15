@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Debbie Thomas","mobileNum":9960965257,"zipCode":"76817","streetAddress":"1265 Ronald Heights","city":"Arnoldland","state":"Virginia","country":"Equatorial Guinea","UserId":22,"updatedAt":"2026-10-15T06:44:12.846Z","createdAt":"2026-10-15T06:44:12.846Z"}}
