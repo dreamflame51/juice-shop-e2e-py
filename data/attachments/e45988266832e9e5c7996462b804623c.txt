@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Jennifer Rosales","mobileNum":1263403185,"zipCode":"19227","streetAddress":"66219 Forbes Inlet Apt. 379","city":"South Calvinside","state":"Michigan","country":"Venezuela","UserId":30,"updatedAt":"2026-10-16T06:34:47.315Z","createdAt":"2026-10-16T06:34:47.315Z"}}

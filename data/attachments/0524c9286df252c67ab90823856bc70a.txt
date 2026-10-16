@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jordan Mitchell","mobileNum":3651877727,"zipCode":"94911","streetAddress":"0929 Cynthia Pass Suite 385","city":"West Tracey","state":"Arizona","country":"Qatar","UserId":23,"updatedAt":"2026-10-16T06:34:46.821Z","createdAt":"2026-10-16T06:34:46.821Z"}}

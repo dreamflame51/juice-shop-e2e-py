@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Michelle Fuller","mobileNum":4302772143,"zipCode":"46864","streetAddress":"0467 Hall Avenue","city":"Gavinport","state":"Colorado","country":"Korea","UserId":22,"updatedAt":"2026-10-16T06:35:07.446Z","createdAt":"2026-10-16T06:35:07.446Z"}}

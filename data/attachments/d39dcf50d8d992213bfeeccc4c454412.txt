@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Jason Sparks","mobileNum":4989139310,"zipCode":"64958","streetAddress":"51820 James Hill Apt. 595","city":"New Megan","state":"Oregon","country":"Peru","UserId":25,"updatedAt":"2026-10-16T06:34:46.999Z","createdAt":"2026-10-16T06:34:46.999Z"}}
