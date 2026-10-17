@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Brooke Howard","mobileNum":9922504319,"zipCode":"14948","streetAddress":"4699 Lawrence Valleys","city":"West Lisa","state":"Minnesota","country":"Comoros","UserId":22,"updatedAt":"2026-10-17T06:24:13.048Z","createdAt":"2026-10-17T06:24:13.048Z"}}

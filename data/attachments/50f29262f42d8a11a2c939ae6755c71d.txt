@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Louis Frederick","mobileNum":739078079,"zipCode":"05761","streetAddress":"0348 Elizabeth Plain","city":"Martinezborough","state":"Kansas","country":"French Southern Territories","UserId":25,"updatedAt":"2026-10-17T06:23:54.197Z","createdAt":"2026-10-17T06:23:54.197Z"}}
