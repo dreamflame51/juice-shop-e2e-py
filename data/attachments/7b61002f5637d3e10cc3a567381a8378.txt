@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Cynthia Smith","mobileNum":11138038,"zipCode":"86980","streetAddress":"591 Walters Row","city":"South Michelleside","state":"Wyoming","country":"Bahrain","UserId":25,"updatedAt":"2026-10-18T06:48:41.007Z","createdAt":"2026-10-18T06:48:41.007Z"}}

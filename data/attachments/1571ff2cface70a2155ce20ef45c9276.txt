@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Bob Carson","cardNum":4069526900231111,"expMonth":8,"expYear":2094,"UserId":29,"updatedAt":"2026-10-18T06:48:41.214Z","createdAt":"2026-10-18T06:48:41.214Z"}}

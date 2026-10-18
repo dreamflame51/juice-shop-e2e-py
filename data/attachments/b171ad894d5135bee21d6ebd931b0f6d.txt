@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Andrew Singh","mobileNum":3324085710,"zipCode":"89979","streetAddress":"1292 John Common Suite 033","city":"Lake Christopher","state":"Georgia","country":"Egypt","UserId":29,"updatedAt":"2026-10-18T06:48:41.190Z","createdAt":"2026-10-18T06:48:41.190Z"}}

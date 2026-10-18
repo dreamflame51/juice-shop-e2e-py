@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Joshua Hutchinson","mobileNum":2377217837,"zipCode":"09691","streetAddress":"1412 Bell Roads","city":"Rachelbury","state":"Arizona","country":"Guyana","UserId":22,"updatedAt":"2026-10-18T06:48:40.912Z","createdAt":"2026-10-18T06:48:40.912Z"}}

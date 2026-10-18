@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Keith Campbell","mobileNum":8906810589,"zipCode":"46528","streetAddress":"767 Teresa Locks Suite 650","city":"South Jacqueline","state":"Indiana","country":"Liberia","UserId":22,"updatedAt":"2026-10-18T06:48:55.755Z","createdAt":"2026-10-18T06:48:55.755Z"}}
