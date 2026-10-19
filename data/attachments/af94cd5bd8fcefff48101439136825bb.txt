@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Troy Thornton","mobileNum":3859235630,"zipCode":"63836","streetAddress":"051 Gilbert Divide","city":"Strongchester","state":"Arkansas","country":"Latvia","UserId":22,"updatedAt":"2026-10-19T07:07:22.560Z","createdAt":"2026-10-19T07:07:22.560Z"}}

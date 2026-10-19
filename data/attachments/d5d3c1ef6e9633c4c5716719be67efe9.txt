@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"James Lopez","mobileNum":4817980862,"zipCode":"92983","streetAddress":"932 Seth Stravenue Apt. 888","city":"Lake Susanview","state":"Rhode Island","country":"Puerto Rico","UserId":29,"updatedAt":"2026-10-19T07:07:08.188Z","createdAt":"2026-10-19T07:07:08.188Z"}}

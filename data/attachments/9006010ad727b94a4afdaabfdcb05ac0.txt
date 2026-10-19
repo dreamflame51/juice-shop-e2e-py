@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jennifer Parsons","mobileNum":5085362133,"zipCode":"38151","streetAddress":"98528 Rick Rapids Apt. 475","city":"Gallaghermouth","state":"Vermont","country":"Suriname","UserId":22,"updatedAt":"2026-10-19T07:07:07.750Z","createdAt":"2026-10-19T07:07:07.750Z"}}
