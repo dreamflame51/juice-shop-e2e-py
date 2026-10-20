@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Dr. Lisa Dickson DDS","mobileNum":5614291272,"zipCode":"07685","streetAddress":"935 Alisha Ridge Suite 887","city":"Toddshire","state":"Ohio","country":"Venezuela","UserId":22,"updatedAt":"2026-10-20T06:52:08.024Z","createdAt":"2026-10-20T06:52:08.024Z"}}

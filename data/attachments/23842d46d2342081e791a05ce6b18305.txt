@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Peter Galloway","mobileNum":3617076995,"zipCode":"24002","streetAddress":"678 Griffith Dam","city":"Debbieshire","state":"Mississippi","country":"Honduras","UserId":22,"updatedAt":"2026-10-20T06:52:30.068Z","createdAt":"2026-10-20T06:52:30.068Z"}}

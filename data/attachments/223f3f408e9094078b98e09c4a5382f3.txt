@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Cody Wise","mobileNum":202831154,"zipCode":"63871","streetAddress":"1010 Lawrence Ferry Apt. 700","city":"East Debrabury","state":"California","country":"Namibia","UserId":30,"updatedAt":"2026-10-20T06:52:08.487Z","createdAt":"2026-10-20T06:52:08.487Z"}}

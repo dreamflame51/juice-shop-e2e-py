@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":27,"email":"jeffrey79.tcdcbvms@e2e.test","updatedAt":"2026-10-20T06:52:33.848Z","createdAt":"2026-10-20T06:52:33.848Z","deletedAt":null}}
