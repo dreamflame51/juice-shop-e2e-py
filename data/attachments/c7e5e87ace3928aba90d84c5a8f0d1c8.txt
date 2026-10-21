@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"David Harris","mobileNum":7835187284,"zipCode":"88664","streetAddress":"9685 Reilly Pass","city":"West Thomasport","state":"Connecticut","country":"Brunei Darussalam","UserId":25,"updatedAt":"2026-10-21T06:48:18.031Z","createdAt":"2026-10-21T06:48:18.031Z"}}

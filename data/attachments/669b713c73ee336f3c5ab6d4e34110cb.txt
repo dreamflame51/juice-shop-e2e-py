@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"William Arnold","mobileNum":2221622782,"zipCode":"61942","streetAddress":"660 Nicole Via","city":"Meadowsburgh","state":"Texas","country":"France","UserId":30,"updatedAt":"2026-10-21T06:48:18.266Z","createdAt":"2026-10-21T06:48:18.266Z"}}

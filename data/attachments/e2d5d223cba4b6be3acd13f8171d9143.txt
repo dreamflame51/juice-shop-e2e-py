@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kathryn Boyd","mobileNum":4443130479,"zipCode":"84063","streetAddress":"88321 Rogers Street Suite 853","city":"Port Justin","state":"South Dakota","country":"Belgium","UserId":23,"updatedAt":"2026-10-21T06:48:17.928Z","createdAt":"2026-10-21T06:48:17.928Z"}}
