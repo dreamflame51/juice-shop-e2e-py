@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kristina Lewis","mobileNum":5009672981,"zipCode":"71199","streetAddress":"8952 Angela Locks Suite 998","city":"Williamsside","state":"Idaho","country":"United States Minor Outlying Islands","UserId":24,"updatedAt":"2026-10-22T06:50:04.999Z","createdAt":"2026-10-22T06:50:04.999Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Stephanie Alexander","mobileNum":7625307644,"zipCode":"06027","streetAddress":"185 Morales Knoll","city":"Acostafort","state":"Vermont","country":"Jordan","UserId":22,"updatedAt":"2026-10-22T06:50:43.344Z","createdAt":"2026-10-22T06:50:43.344Z"}}

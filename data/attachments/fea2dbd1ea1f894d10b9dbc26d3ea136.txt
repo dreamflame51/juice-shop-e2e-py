@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Tyler Taylor","cardNum":4857759877571111,"expMonth":2,"expYear":2086,"UserId":29,"updatedAt":"2026-10-22T06:50:05.504Z","createdAt":"2026-10-22T06:50:05.504Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kelly Hansen","mobileNum":6277768428,"zipCode":"53902","streetAddress":"206 Avila Springs Apt. 939","city":"Port Jacquelinemouth","state":"Alaska","country":"Malta","UserId":25,"updatedAt":"2026-10-22T06:50:05.157Z","createdAt":"2026-10-22T06:50:05.157Z"}}
