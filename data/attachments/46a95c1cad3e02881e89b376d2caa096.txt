@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Suzanne Lee","mobileNum":5179035739,"zipCode":"03395","streetAddress":"3248 Craig Junction Suite 880","city":"Josephland","state":"Kentucky","country":"United States Virgin Islands","UserId":22,"updatedAt":"2026-10-23T06:45:27.021Z","createdAt":"2026-10-23T06:45:27.021Z"}}
