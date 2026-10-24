@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Andrew Smith","mobileNum":8250724277,"zipCode":"60571","streetAddress":"79395 Troy Meadows","city":"South Jessicaside","state":"Georgia","country":"Netherlands","UserId":22,"updatedAt":"2026-10-24T06:41:42.482Z","createdAt":"2026-10-24T06:41:42.482Z"}}

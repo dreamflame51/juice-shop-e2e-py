@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Blake Rodriguez","mobileNum":5482207274,"zipCode":"35668","streetAddress":"65244 Berry Springs Apt. 398","city":"East Gabriel","state":"Delaware","country":"Nicaragua","UserId":22,"updatedAt":"2026-10-24T06:41:13.479Z","createdAt":"2026-10-24T06:41:13.479Z"}}

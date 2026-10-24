@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Patricia Carter","mobileNum":2845682992,"zipCode":"73692","streetAddress":"4678 Thomas Rue","city":"Port Jessebury","state":"Missouri","country":"Jamaica","UserId":30,"updatedAt":"2026-10-24T06:41:13.922Z","createdAt":"2026-10-24T06:41:13.922Z"}}
