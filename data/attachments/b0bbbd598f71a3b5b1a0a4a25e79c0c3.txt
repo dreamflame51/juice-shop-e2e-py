@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Michael Lewis","mobileNum":739329656,"zipCode":"80898","streetAddress":"540 York Unions Apt. 710","city":"East Alexandra","state":"West Virginia","country":"Tanzania","UserId":22,"updatedAt":"2026-10-25T07:06:58.914Z","createdAt":"2026-10-25T07:06:58.914Z"}}

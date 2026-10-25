@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Jacob Gutierrez","mobileNum":1376203582,"zipCode":"84195","streetAddress":"40056 Timothy Crossing Suite 555","city":"Hughesfort","state":"Montana","country":"Guinea","UserId":25,"updatedAt":"2026-10-25T07:06:59.107Z","createdAt":"2026-10-25T07:06:59.107Z"}}

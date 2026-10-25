@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Tyler Barnes","mobileNum":509550331,"zipCode":"70866","streetAddress":"750 Rebecca Drive","city":"Crawfordstad","state":"Indiana","country":"Serbia","UserId":22,"updatedAt":"2026-10-25T07:07:20.905Z","createdAt":"2026-10-25T07:07:20.905Z"}}

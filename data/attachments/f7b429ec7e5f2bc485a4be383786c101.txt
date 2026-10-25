@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Tiffany Mccormick","mobileNum":4646173486,"zipCode":"22800","streetAddress":"0570 Schultz Valleys","city":"North Austin","state":"New York","country":"Macao","UserId":30,"updatedAt":"2026-10-25T07:06:59.419Z","createdAt":"2026-10-25T07:06:59.419Z"}}
