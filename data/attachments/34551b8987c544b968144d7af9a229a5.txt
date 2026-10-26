@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Benjamin Rice","cardNum":4133317699101111,"expMonth":7,"expYear":2088,"UserId":22,"updatedAt":"2026-10-26T07:14:21.007Z","createdAt":"2026-10-26T07:14:21.007Z"}}

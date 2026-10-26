@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Andrew Robinson","mobileNum":6743232901,"zipCode":"67255","streetAddress":"8956 Myers Plain","city":"Fergusonside","state":"West Virginia","country":"Martinique","UserId":25,"updatedAt":"2026-10-26T07:13:54.860Z","createdAt":"2026-10-26T07:13:54.860Z"}}

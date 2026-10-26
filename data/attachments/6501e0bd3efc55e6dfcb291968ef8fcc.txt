@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Mrs. Dawn Hayes MD","mobileNum":1353300230,"zipCode":"04310","streetAddress":"621 Kathleen Spur Apt. 401","city":"Ashleytown","state":"New Jersey","country":"Bahamas","UserId":22,"updatedAt":"2026-10-26T07:14:20.921Z","createdAt":"2026-10-26T07:14:20.921Z"}}

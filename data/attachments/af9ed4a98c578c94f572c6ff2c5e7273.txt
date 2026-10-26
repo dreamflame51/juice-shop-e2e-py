@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Michael Chen","mobileNum":2142161278,"zipCode":"94604","streetAddress":"8995 Hensley Orchard","city":"Herberthaven","state":"Georgia","country":"Puerto Rico","UserId":22,"updatedAt":"2026-10-26T07:13:54.721Z","createdAt":"2026-10-26T07:13:54.721Z"}}
