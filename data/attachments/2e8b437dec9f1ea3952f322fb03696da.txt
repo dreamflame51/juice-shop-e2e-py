@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Mr. Andrew King DDS","cardNum":4476590606151111,"expMonth":5,"expYear":2099,"UserId":22,"updatedAt":"2026-10-27T07:03:08.541Z","createdAt":"2026-10-27T07:03:08.541Z"}}

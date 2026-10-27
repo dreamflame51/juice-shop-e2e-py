@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Jennifer Cantu","mobileNum":3886190771,"zipCode":"66498","streetAddress":"8183 Christopher Walk Apt. 817","city":"South Anthony","state":"Hawaii","country":"Thailand","UserId":30,"updatedAt":"2026-10-27T07:03:08.792Z","createdAt":"2026-10-27T07:03:08.792Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jeffrey Mccall","mobileNum":219756314,"zipCode":"43810","streetAddress":"376 Richardson Island Suite 838","city":"Davidmouth","state":"South Dakota","country":"Tonga","UserId":22,"updatedAt":"2026-10-27T07:03:34.744Z","createdAt":"2026-10-27T07:03:34.744Z"}}

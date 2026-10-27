@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jennifer Smith","mobileNum":3188963061,"zipCode":"23303","streetAddress":"098 Laura Mills","city":"West Elizabeth","state":"New Jersey","country":"Hungary","UserId":22,"updatedAt":"2026-10-27T07:03:08.465Z","createdAt":"2026-10-27T07:03:08.465Z"}}

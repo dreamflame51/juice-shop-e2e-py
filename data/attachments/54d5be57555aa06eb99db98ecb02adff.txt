@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Kendra Walker","cardNum":4081863298321111,"expMonth":1,"expYear":2083,"UserId":30,"updatedAt":"2026-10-27T07:03:08.810Z","createdAt":"2026-10-27T07:03:08.810Z"}}
