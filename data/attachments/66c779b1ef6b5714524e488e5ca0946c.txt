@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Spencer Herrera","cardNum":4629391299051111,"expMonth":9,"expYear":2083,"UserId":25,"updatedAt":"2026-10-28T07:44:06.740Z","createdAt":"2026-10-28T07:44:06.740Z"}}

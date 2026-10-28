@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Amanda Goodman","mobileNum":3655841206,"zipCode":"73267","streetAddress":"3624 Perez Curve","city":"Scottland","state":"Maine","country":"Macao","UserId":22,"updatedAt":"2026-10-28T07:45:10.094Z","createdAt":"2026-10-28T07:45:10.094Z"}}

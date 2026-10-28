@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Chelsea Smith","mobileNum":7195565846,"zipCode":"90841","streetAddress":"90249 Thompson Wells Apt. 183","city":"Port Aliciaton","state":"Oklahoma","country":"Uganda","UserId":29,"updatedAt":"2026-10-28T07:44:06.936Z","createdAt":"2026-10-28T07:44:06.936Z"}}

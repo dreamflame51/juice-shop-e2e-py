@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Chloe Stone","mobileNum":4175842546,"zipCode":"28825","streetAddress":"655 Benjamin Locks Suite 244","city":"Gilbertmouth","state":"Alabama","country":"Mauritius","UserId":25,"updatedAt":"2026-10-28T07:44:06.675Z","createdAt":"2026-10-28T07:44:06.675Z"}}

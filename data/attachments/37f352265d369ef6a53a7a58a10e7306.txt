@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Ronald Davis","mobileNum":6268859987,"zipCode":"87401","streetAddress":"50048 Olson Lock Suite 397","city":"Mendeztown","state":"South Dakota","country":"Mozambique","UserId":22,"updatedAt":"2026-10-28T07:44:06.513Z","createdAt":"2026-10-28T07:44:06.513Z"}}
