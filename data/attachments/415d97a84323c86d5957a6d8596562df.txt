@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Jessica Lopez","mobileNum":6117999261,"zipCode":"27295","streetAddress":"11949 Jones Fork Suite 373","city":"Lewisbury","state":"West Virginia","country":"Peru","UserId":25,"updatedAt":"2026-10-29T07:49:32.797Z","createdAt":"2026-10-29T07:49:32.797Z"}}

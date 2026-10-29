@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Mary Mills","mobileNum":5633534810,"zipCode":"01629","streetAddress":"822 Taylor Oval Suite 212","city":"North Sheenastad","state":"North Carolina","country":"Cape Verde","UserId":29,"updatedAt":"2026-10-29T07:49:33.088Z","createdAt":"2026-10-29T07:49:33.088Z"}}

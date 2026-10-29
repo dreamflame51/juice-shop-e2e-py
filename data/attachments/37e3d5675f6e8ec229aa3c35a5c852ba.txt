@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Christopher Jacobs","mobileNum":9409508856,"zipCode":"46498","streetAddress":"3059 Evans Meadow Suite 802","city":"Priceside","state":"Michigan","country":"Saint Martin","UserId":22,"updatedAt":"2026-10-29T07:49:55.865Z","createdAt":"2026-10-29T07:49:55.865Z"}}
