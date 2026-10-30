@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Mark Jordan","mobileNum":3891064089,"zipCode":"96702","streetAddress":"07252 Donald Plaza","city":"Lake Veronica","state":"New Hampshire","country":"South Africa","UserId":25,"updatedAt":"2026-10-30T07:54:14.778Z","createdAt":"2026-10-30T07:54:14.778Z"}}

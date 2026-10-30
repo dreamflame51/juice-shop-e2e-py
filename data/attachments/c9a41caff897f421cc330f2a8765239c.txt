@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Jamie Johnson","mobileNum":122090554,"zipCode":"28208","streetAddress":"5464 Myers Drive Suite 178","city":"Espinozaland","state":"North Dakota","country":"Bouvet Island (Bouvetoya)","UserId":29,"updatedAt":"2026-10-30T07:54:15.013Z","createdAt":"2026-10-30T07:54:15.013Z"}}

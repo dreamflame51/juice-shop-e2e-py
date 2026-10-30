@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Johnny Clark","mobileNum":143376803,"zipCode":"34307","streetAddress":"48554 Perez Glens Apt. 798","city":"Buchananbury","state":"Arizona","country":"Myanmar","UserId":22,"updatedAt":"2026-10-30T07:54:14.663Z","createdAt":"2026-10-30T07:54:14.663Z"}}
