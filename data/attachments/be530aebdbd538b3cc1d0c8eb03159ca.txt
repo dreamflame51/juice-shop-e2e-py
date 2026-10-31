@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Trevor Roberts","mobileNum":2970897337,"zipCode":"30053","streetAddress":"23733 Smith Coves Apt. 942","city":"Lake Jeffreymouth","state":"Michigan","country":"Burkina Faso","UserId":30,"updatedAt":"2026-10-31T07:44:58.436Z","createdAt":"2026-10-31T07:44:58.436Z"}}

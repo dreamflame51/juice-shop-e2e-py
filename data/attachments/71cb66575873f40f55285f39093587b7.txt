@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Hunter Carroll","mobileNum":8993042082,"zipCode":"20473","streetAddress":"66867 Eric Square","city":"Christinafort","state":"Ohio","country":"Japan","UserId":22,"updatedAt":"2026-10-31T07:45:20.443Z","createdAt":"2026-10-31T07:45:20.443Z"}}

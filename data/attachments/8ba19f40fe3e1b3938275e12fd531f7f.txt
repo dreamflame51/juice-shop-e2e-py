@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Andrew Anderson","mobileNum":6869694565,"zipCode":"07135","streetAddress":"45643 Walsh Dale","city":"Brendatown","state":"Oklahoma","country":"Vietnam","UserId":23,"updatedAt":"2026-10-31T07:44:58.035Z","createdAt":"2026-10-31T07:44:58.035Z"}}

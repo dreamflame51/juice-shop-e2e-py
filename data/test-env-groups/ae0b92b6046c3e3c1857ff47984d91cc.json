@@ -1,1 +1,1 @@
-{"id":"ae0b92b6046c3e3c1857ff47984d91cc","fullName":"tests.ui.auth.test_registration#test_a_new_customer_can_register_and_then_log_in","name":"test_a_new_customer_can_register_and_then_log_in[chromium]","status":"passed","testResultsByEnv":{"default":"2c378180a24cdd7684718f2ee51e5c1d"}}
+{"id":"ae0b92b6046c3e3c1857ff47984d91cc","fullName":"tests.ui.auth.test_registration#test_a_new_customer_can_register_and_then_log_in","name":"test_a_new_customer_can_register_and_then_log_in[chromium]","status":"passed","testResultsByEnv":{"default":"790a788a64262c7486f9aff337dcfac8"}}

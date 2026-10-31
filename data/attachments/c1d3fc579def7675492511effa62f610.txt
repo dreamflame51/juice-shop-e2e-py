@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Destiny Davis","cardNum":4132673258841111,"expMonth":3,"expYear":2096,"UserId":23,"updatedAt":"2026-10-31T07:44:58.128Z","createdAt":"2026-10-31T07:44:58.128Z"}}

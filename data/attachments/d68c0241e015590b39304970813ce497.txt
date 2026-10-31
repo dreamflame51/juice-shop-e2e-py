@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Wayne Cruz","mobileNum":3982956338,"zipCode":"71761","streetAddress":"374 Perry Harbors","city":"West Christinebury","state":"Vermont","country":"Saint Barthelemy","UserId":25,"updatedAt":"2026-10-31T07:44:58.119Z","createdAt":"2026-10-31T07:44:58.119Z"}}

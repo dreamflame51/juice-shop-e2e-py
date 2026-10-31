@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Dustin Johnson","cardNum":4890914134511111,"expMonth":8,"expYear":2093,"UserId":30,"updatedAt":"2026-10-31T07:44:58.469Z","createdAt":"2026-10-31T07:44:58.469Z"}}
