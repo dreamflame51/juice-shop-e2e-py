@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Stacey Rodriguez","mobileNum":9023327131,"zipCode":"27438","streetAddress":"97016 Joseph Springs Suite 964","city":"Dunnstad","state":"Idaho","country":"Central African Republic","UserId":22,"updatedAt":"2026-11-01T08:26:13.709Z","createdAt":"2026-11-01T08:26:13.709Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Andrew Diaz","mobileNum":5513586033,"zipCode":"89474","streetAddress":"649 Gina Streets","city":"East Brian","state":"Indiana","country":"Lao People's Democratic Republic","UserId":25,"updatedAt":"2026-11-01T08:25:48.977Z","createdAt":"2026-11-01T08:25:48.977Z"}}

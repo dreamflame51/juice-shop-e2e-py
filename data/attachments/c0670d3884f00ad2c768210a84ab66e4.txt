@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Travis Holt","mobileNum":9669399884,"zipCode":"87665","streetAddress":"154 Lisa Plaza","city":"East Chelsey","state":"Delaware","country":"Nigeria","UserId":22,"updatedAt":"2026-11-01T08:25:48.868Z","createdAt":"2026-11-01T08:25:48.868Z"}}

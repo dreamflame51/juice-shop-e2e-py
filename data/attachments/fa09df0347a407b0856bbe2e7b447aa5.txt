@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Robert Barron","mobileNum":9682646049,"zipCode":"48780","streetAddress":"2836 Crystal Roads Apt. 711","city":"South Alexandra","state":"Connecticut","country":"Bulgaria","UserId":30,"updatedAt":"2026-11-01T08:25:49.293Z","createdAt":"2026-11-01T08:25:49.293Z"}}
