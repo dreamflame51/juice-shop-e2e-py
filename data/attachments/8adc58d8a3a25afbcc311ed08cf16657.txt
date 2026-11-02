@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Marie Lynn","mobileNum":4240279730,"zipCode":"92148","streetAddress":"36254 Kimberly Meadow","city":"Tonyaside","state":"Washington","country":"Austria","UserId":22,"updatedAt":"2026-11-02T08:39:12.284Z","createdAt":"2026-11-02T08:39:12.284Z"}}

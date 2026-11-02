@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Olivia Miller","cardNum":4233543341541111,"expMonth":8,"expYear":2087,"UserId":22,"updatedAt":"2026-11-02T08:39:12.956Z","createdAt":"2026-11-02T08:39:12.956Z"}}

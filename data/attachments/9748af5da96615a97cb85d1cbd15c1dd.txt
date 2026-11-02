@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Kyle Bailey","mobileNum":1773287388,"zipCode":"23773","streetAddress":"3844 Nina Ports Suite 373","city":"West Leechester","state":"Indiana","country":"Tonga","UserId":29,"updatedAt":"2026-11-02T08:38:46.680Z","createdAt":"2026-11-02T08:38:46.680Z"}}

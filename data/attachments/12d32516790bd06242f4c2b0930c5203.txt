@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Daniel King","mobileNum":2829762326,"zipCode":"32685","streetAddress":"436 Chase Parkways","city":"Wolffort","state":"Missouri","country":"Sao Tome and Principe","UserId":25,"updatedAt":"2026-11-02T08:38:46.374Z","createdAt":"2026-11-02T08:38:46.374Z"}}

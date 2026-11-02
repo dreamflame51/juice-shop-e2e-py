@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":23,"email":"haroldmcgrath.tnecjuka@e2e.test","updatedAt":"2026-11-02T08:39:10.373Z","createdAt":"2026-11-02T08:39:10.373Z","deletedAt":null}}
