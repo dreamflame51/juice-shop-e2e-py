@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Robert Mann","mobileNum":9009822238,"zipCode":"73796","streetAddress":"2853 Smith Square Suite 100","city":"Johnfort","state":"Oklahoma","country":"Palestinian Territory","UserId":29,"updatedAt":"2026-11-03T08:50:47.592Z","createdAt":"2026-11-03T08:50:47.592Z"}}

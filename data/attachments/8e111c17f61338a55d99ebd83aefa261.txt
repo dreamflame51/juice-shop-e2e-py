@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Stephanie Dunn","mobileNum":5533929673,"zipCode":"29939","streetAddress":"31461 Melissa Road","city":"Ruthmouth","state":"Kansas","country":"Chile","UserId":24,"updatedAt":"2026-11-03T08:50:47.128Z","createdAt":"2026-11-03T08:50:47.128Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Timothy Barton","mobileNum":5158703806,"zipCode":"04094","streetAddress":"60810 Mcfarland Mills","city":"New Dianaside","state":"Maine","country":"Ecuador","UserId":22,"updatedAt":"2026-11-03T08:51:12.511Z","createdAt":"2026-11-03T08:51:12.511Z"}}
