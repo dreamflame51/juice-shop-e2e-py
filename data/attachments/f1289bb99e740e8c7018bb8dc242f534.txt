@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Joshua Bruce","mobileNum":2264872383,"zipCode":"09737","streetAddress":"449 Mary Islands","city":"Danielleville","state":"Rhode Island","country":"Slovakia (Slovak Republic)","UserId":23,"updatedAt":"2026-11-04T08:19:15.120Z","createdAt":"2026-11-04T08:19:15.120Z"}}

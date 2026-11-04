@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Gregory Gibson","mobileNum":9664663064,"zipCode":"59130","streetAddress":"8593 Michael Junctions Suite 466","city":"Davischester","state":"Vermont","country":"Croatia","UserId":22,"updatedAt":"2026-11-04T08:19:45.871Z","createdAt":"2026-11-04T08:19:45.871Z"}}

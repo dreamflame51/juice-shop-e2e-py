@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Barbara Hill","mobileNum":8376632148,"zipCode":"85292","streetAddress":"8814 Gordon Inlet Apt. 677","city":"Lake Kiara","state":"Pennsylvania","country":"Saint Kitts and Nevis","UserId":25,"updatedAt":"2026-11-04T08:19:15.251Z","createdAt":"2026-11-04T08:19:15.251Z"}}
