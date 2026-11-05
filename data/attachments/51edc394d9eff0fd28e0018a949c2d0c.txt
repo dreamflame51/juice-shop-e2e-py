@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Steven Mccoy","cardNum":4699658906961111,"expMonth":10,"expYear":2096,"UserId":29,"updatedAt":"2026-11-05T08:44:34.618Z","createdAt":"2026-11-05T08:44:34.618Z"}}

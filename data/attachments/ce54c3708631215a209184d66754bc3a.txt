@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Tyler Cooley","mobileNum":7744342338,"zipCode":"36483","streetAddress":"511 Walter Junctions Apt. 747","city":"Allisonton","state":"Nebraska","country":"Malaysia","UserId":29,"updatedAt":"2026-11-05T08:44:34.556Z","createdAt":"2026-11-05T08:44:34.556Z"}}

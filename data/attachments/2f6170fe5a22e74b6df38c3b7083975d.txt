@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Darren Crosby","mobileNum":1810393557,"zipCode":"56261","streetAddress":"8324 Juarez Ports Apt. 357","city":"Evanstown","state":"Illinois","country":"Western Sahara","UserId":25,"updatedAt":"2026-11-05T08:44:34.238Z","createdAt":"2026-11-05T08:44:34.238Z"}}

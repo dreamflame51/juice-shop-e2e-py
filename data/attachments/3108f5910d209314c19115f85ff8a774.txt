@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Sonya Friedman","cardNum":4976359854361111,"expMonth":12,"expYear":2095,"UserId":22,"updatedAt":"2026-11-05T08:44:57.330Z","createdAt":"2026-11-05T08:44:57.330Z"}}

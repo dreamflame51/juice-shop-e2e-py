@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Larry Larson","mobileNum":6081821438,"zipCode":"22277","streetAddress":"07996 Holland Causeway","city":"South Andrea","state":"California","country":"Gibraltar","UserId":23,"updatedAt":"2026-11-05T08:44:34.065Z","createdAt":"2026-11-05T08:44:34.065Z"}}
