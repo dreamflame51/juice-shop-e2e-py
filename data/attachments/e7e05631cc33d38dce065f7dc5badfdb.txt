@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Brandon Martinez","mobileNum":4744053668,"zipCode":"06075","streetAddress":"1826 Peter Track","city":"East Jenniferborough","state":"New Mexico","country":"Faroe Islands","UserId":29,"updatedAt":"2026-11-06T08:45:55.910Z","createdAt":"2026-11-06T08:45:55.910Z"}}

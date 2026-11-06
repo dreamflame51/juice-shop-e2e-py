@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Eileen Obrien","cardNum":4511947339741111,"expMonth":2,"expYear":2093,"UserId":25,"updatedAt":"2026-11-06T08:45:55.680Z","createdAt":"2026-11-06T08:45:55.680Z"}}

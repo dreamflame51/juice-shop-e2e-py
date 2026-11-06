@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Rachel Snyder","mobileNum":5847430899,"zipCode":"65310","streetAddress":"270 Carol Divide Suite 124","city":"South Kimbury","state":"Indiana","country":"Peru","UserId":24,"updatedAt":"2026-11-06T08:45:55.631Z","createdAt":"2026-11-06T08:45:55.631Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Heather Adams","mobileNum":9588449920,"zipCode":"13475","streetAddress":"4501 Watson Manors Apt. 419","city":"East Haley","state":"Iowa","country":"Palau","UserId":22,"updatedAt":"2026-11-06T08:46:21.989Z","createdAt":"2026-11-06T08:46:21.989Z"}}
