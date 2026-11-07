@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Teresa Bryant","mobileNum":8590506166,"zipCode":"90611","streetAddress":"763 Johnson Route","city":"Annaberg","state":"Texas","country":"Ghana","UserId":22,"updatedAt":"2026-11-07T08:00:57.351Z","createdAt":"2026-11-07T08:00:57.351Z"}}

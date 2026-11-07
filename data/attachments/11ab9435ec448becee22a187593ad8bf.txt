@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Cynthia Gardner","mobileNum":197301079,"zipCode":"70943","streetAddress":"21169 Smith Groves Suite 443","city":"Darleneburgh","state":"Wyoming","country":"Libyan Arab Jamahiriya","UserId":29,"updatedAt":"2026-11-07T08:00:30.898Z","createdAt":"2026-11-07T08:00:30.898Z"}}

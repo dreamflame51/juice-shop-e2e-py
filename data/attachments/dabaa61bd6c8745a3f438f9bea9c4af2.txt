@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Brian Reynolds","mobileNum":4330373863,"zipCode":"59885","streetAddress":"4222 Cole Ranch","city":"Port Maria","state":"New Hampshire","country":"Yemen","UserId":24,"updatedAt":"2026-11-07T08:00:30.468Z","createdAt":"2026-11-07T08:00:30.468Z"}}
