@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Olivia Wilkinson","mobileNum":2722262809,"zipCode":"09434","streetAddress":"380 James Mountain","city":"East Rebecca","state":"New Jersey","country":"Poland","UserId":25,"updatedAt":"2026-11-08T08:19:08.359Z","createdAt":"2026-11-08T08:19:08.359Z"}}

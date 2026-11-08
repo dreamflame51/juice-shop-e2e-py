@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Katie Petersen","mobileNum":8403796465,"zipCode":"81816","streetAddress":"3181 Brent Mount Suite 007","city":"East Debrafort","state":"Michigan","country":"New Zealand","UserId":30,"updatedAt":"2026-11-08T08:19:08.681Z","createdAt":"2026-11-08T08:19:08.681Z"}}

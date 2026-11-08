@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Jenny Williams DDS","cardNum":4747706890351111,"expMonth":9,"expYear":2094,"UserId":25,"updatedAt":"2026-11-08T08:19:08.439Z","createdAt":"2026-11-08T08:19:08.439Z"}}
