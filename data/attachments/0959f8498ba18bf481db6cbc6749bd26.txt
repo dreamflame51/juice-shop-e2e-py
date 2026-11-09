@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Rick Martinez IV","mobileNum":9058103340,"zipCode":"92741","streetAddress":"837 Eric Mountain","city":"North Brent","state":"Kansas","country":"Czech Republic","UserId":23,"updatedAt":"2026-11-09T08:52:39.117Z","createdAt":"2026-11-09T08:52:39.117Z"}}

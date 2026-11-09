@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Melissa Brown","mobileNum":8395744057,"zipCode":"14371","streetAddress":"997 Jordan Extension Apt. 744","city":"Port Josephview","state":"Minnesota","country":"Hong Kong","UserId":29,"updatedAt":"2026-11-09T08:52:39.539Z","createdAt":"2026-11-09T08:52:39.539Z"}}

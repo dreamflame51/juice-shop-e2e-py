@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":7,"fullName":"Todd Munoz","cardNum":4302823048661111,"expMonth":5,"expYear":2093,"UserId":22,"updatedAt":"2026-11-09T08:53:03.292Z","createdAt":"2026-11-09T08:53:03.292Z"}}

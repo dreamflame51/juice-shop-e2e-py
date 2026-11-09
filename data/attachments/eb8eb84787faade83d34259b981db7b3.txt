@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kari Taylor","mobileNum":6588098769,"zipCode":"08591","streetAddress":"2917 Scott Stream Suite 859","city":"Lake Seanland","state":"Rhode Island","country":"Sao Tome and Principe","UserId":25,"updatedAt":"2026-11-09T08:52:39.271Z","createdAt":"2026-11-09T08:52:39.271Z"}}
