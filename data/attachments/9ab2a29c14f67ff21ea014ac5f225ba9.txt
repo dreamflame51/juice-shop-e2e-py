@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jeffrey Villanueva","mobileNum":148927817,"zipCode":"30182","streetAddress":"391 Daniel Walk","city":"Foleyland","state":"Nebraska","country":"Sudan","UserId":24,"updatedAt":"2026-11-10T08:58:18.879Z","createdAt":"2026-11-10T08:58:18.879Z"}}

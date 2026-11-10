@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Heather Booth","mobileNum":6652315257,"zipCode":"09815","streetAddress":"92184 Carter Divide Apt. 858","city":"Cordovamouth","state":"Maine","country":"Japan","UserId":25,"updatedAt":"2026-11-10T08:58:18.952Z","createdAt":"2026-11-10T08:58:18.952Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Erik Smith DDS","mobileNum":5829087526,"zipCode":"80333","streetAddress":"004 Jones Street","city":"Walterchester","state":"Kentucky","country":"Wallis and Futuna","UserId":22,"updatedAt":"2026-11-10T08:58:45.929Z","createdAt":"2026-11-10T08:58:45.929Z"}}
