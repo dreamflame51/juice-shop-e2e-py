@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Thomas Lee","mobileNum":1825308782,"zipCode":"45694","streetAddress":"86926 Rush Mall","city":"Laurenview","state":"Arkansas","country":"Gambia","UserId":29,"updatedAt":"2026-11-11T08:39:03.548Z","createdAt":"2026-11-11T08:39:03.548Z"}}

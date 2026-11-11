@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":22,"email":"taylorjohn.mrbhebop@e2e.test","updatedAt":"2026-11-11T08:39:20.160Z","createdAt":"2026-11-11T08:39:20.160Z","deletedAt":null}}

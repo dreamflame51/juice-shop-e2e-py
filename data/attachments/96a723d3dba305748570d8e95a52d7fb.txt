@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kathleen Sullivan","mobileNum":3462269845,"zipCode":"86912","streetAddress":"0861 Jennifer Plains Suite 378","city":"Williamshaven","state":"Indiana","country":"Latvia","UserId":24,"updatedAt":"2026-11-11T08:39:03.191Z","createdAt":"2026-11-11T08:39:03.191Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"James Harrison","mobileNum":4462077395,"zipCode":"17976","streetAddress":"31030 Sarah Motorway Suite 212","city":"Port Amanda","state":"Utah","country":"Botswana","UserId":26,"updatedAt":"2026-11-11T08:39:03.383Z","createdAt":"2026-11-11T08:39:03.383Z"}}

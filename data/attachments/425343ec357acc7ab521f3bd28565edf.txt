@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kathleen Lee","mobileNum":4535966845,"zipCode":"18123","streetAddress":"82207 Daniel Branch Suite 662","city":"Crystalstad","state":"Georgia","country":"Netherlands","UserId":22,"updatedAt":"2026-11-11T08:39:22.774Z","createdAt":"2026-11-11T08:39:22.774Z"}}
