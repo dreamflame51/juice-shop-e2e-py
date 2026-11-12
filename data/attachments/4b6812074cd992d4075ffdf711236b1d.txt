@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Courtney Steele","mobileNum":6068919227,"zipCode":"23086","streetAddress":"1293 Lee Pines Apt. 029","city":"Smithchester","state":"Georgia","country":"Lesotho","UserId":25,"updatedAt":"2026-11-12T08:58:23.962Z","createdAt":"2026-11-12T08:58:23.962Z"}}

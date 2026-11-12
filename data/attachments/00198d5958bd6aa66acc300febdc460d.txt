@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Michele Fernandez","mobileNum":6448839127,"zipCode":"56077","streetAddress":"648 Henry Circle Suite 627","city":"Brianfort","state":"Alabama","country":"Ghana","UserId":22,"updatedAt":"2026-11-12T08:58:49.636Z","createdAt":"2026-11-12T08:58:49.636Z"}}

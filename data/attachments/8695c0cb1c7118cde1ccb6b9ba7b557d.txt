@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Patricia Palmer","mobileNum":8236881682,"zipCode":"33701","streetAddress":"624 Tran Burgs Apt. 780","city":"Whiteland","state":"Utah","country":"New Caledonia","UserId":29,"updatedAt":"2026-11-12T08:58:24.305Z","createdAt":"2026-11-12T08:58:24.305Z"}}

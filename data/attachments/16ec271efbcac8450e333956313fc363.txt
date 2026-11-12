@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Theresa Decker","mobileNum":2659610831,"zipCode":"20303","streetAddress":"326 Montgomery Parkways Apt. 740","city":"Lambertport","state":"Delaware","country":"Croatia","UserId":23,"updatedAt":"2026-11-12T08:58:23.829Z","createdAt":"2026-11-12T08:58:23.829Z"}}
