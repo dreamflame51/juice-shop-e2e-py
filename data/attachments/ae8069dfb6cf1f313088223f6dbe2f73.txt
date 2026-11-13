@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Nathaniel Hamilton","mobileNum":7256528982,"zipCode":"22863","streetAddress":"42420 Hall Springs Suite 499","city":"Evanschester","state":"New York","country":"Paraguay","UserId":23,"updatedAt":"2026-11-13T08:54:28.757Z","createdAt":"2026-11-13T08:54:28.757Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Timothy Walsh","mobileNum":7623308323,"zipCode":"87444","streetAddress":"968 Joseph Isle Apt. 860","city":"West Maureenborough","state":"Arkansas","country":"Netherlands Antilles","UserId":25,"updatedAt":"2026-11-13T08:54:28.920Z","createdAt":"2026-11-13T08:54:28.920Z"}}

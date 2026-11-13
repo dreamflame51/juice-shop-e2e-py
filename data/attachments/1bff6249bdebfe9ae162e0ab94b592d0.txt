@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Linda Hall","mobileNum":8638950133,"zipCode":"92916","streetAddress":"89253 Tracy Turnpike","city":"East Chrismouth","state":"Missouri","country":"Ukraine","UserId":30,"updatedAt":"2026-11-13T08:54:29.207Z","createdAt":"2026-11-13T08:54:29.207Z"}}
