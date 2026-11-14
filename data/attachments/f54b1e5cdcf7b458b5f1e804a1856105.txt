@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kristi Perkins","mobileNum":5915120603,"zipCode":"90030","streetAddress":"047 Sarah Forge Suite 922","city":"Port Samanthaside","state":"Florida","country":"Djibouti","UserId":24,"updatedAt":"2026-11-14T08:19:24.287Z","createdAt":"2026-11-14T08:19:24.287Z"}}

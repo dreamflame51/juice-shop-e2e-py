@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Joshua Hopkins","mobileNum":3492538699,"zipCode":"08911","streetAddress":"67845 Elliott Spurs","city":"Lake Chase","state":"Montana","country":"Turkey","UserId":25,"updatedAt":"2026-11-14T08:19:24.382Z","createdAt":"2026-11-14T08:19:24.382Z"}}

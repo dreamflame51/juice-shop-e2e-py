@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jeffrey Lane","mobileNum":3953268387,"zipCode":"35737","streetAddress":"7214 John Trail","city":"Lauraton","state":"Wisconsin","country":"Christmas Island","UserId":22,"updatedAt":"2026-11-14T08:19:38.152Z","createdAt":"2026-11-14T08:19:38.152Z"}}
