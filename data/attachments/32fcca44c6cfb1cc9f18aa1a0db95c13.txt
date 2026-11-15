@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Erin Young","mobileNum":5014190634,"zipCode":"31857","streetAddress":"857 Grant Mountains","city":"Hoffmanton","state":"Mississippi","country":"San Marino","UserId":24,"updatedAt":"2026-11-15T08:38:33.024Z","createdAt":"2026-11-15T08:38:33.024Z"}}

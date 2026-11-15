@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Debra Moore","mobileNum":5474680795,"zipCode":"86193","streetAddress":"4352 Lopez Lakes","city":"East Jodi","state":"Utah","country":"Guatemala","UserId":25,"updatedAt":"2026-11-15T08:38:33.113Z","createdAt":"2026-11-15T08:38:33.113Z"}}

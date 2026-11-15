@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Kimberly Bell","mobileNum":2868073447,"zipCode":"64059","streetAddress":"830 Page Lock Suite 972","city":"Markhaven","state":"Connecticut","country":"Solomon Islands","UserId":22,"updatedAt":"2026-11-15T08:38:58.589Z","createdAt":"2026-11-15T08:38:58.589Z"}}

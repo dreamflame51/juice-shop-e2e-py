@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Austin Nguyen","mobileNum":9834695849,"zipCode":"61196","streetAddress":"48199 Smith Plaza","city":"Hawkinsstad","state":"Ohio","country":"Algeria","UserId":29,"updatedAt":"2026-11-15T08:38:33.283Z","createdAt":"2026-11-15T08:38:33.283Z"}}
