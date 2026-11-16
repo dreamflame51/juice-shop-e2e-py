@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Diane Moran","mobileNum":1531806626,"zipCode":"60015","streetAddress":"94817 Jose Glens","city":"Lake Tammymouth","state":"North Carolina","country":"Jersey","UserId":23,"updatedAt":"2026-11-16T08:47:13.480Z","createdAt":"2026-11-16T08:47:13.480Z"}}

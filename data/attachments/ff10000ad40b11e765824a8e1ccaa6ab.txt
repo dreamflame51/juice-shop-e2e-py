@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Anne Oliver","mobileNum":236241063,"zipCode":"76814","streetAddress":"0537 Lorraine Parks","city":"Nicoleland","state":"South Dakota","country":"El Salvador","UserId":25,"updatedAt":"2026-11-16T08:47:13.608Z","createdAt":"2026-11-16T08:47:13.608Z"}}

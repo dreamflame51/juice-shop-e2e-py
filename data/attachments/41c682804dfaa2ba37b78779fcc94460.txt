@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Brian Farrell","mobileNum":5922795647,"zipCode":"05639","streetAddress":"6870 Kenneth Manor Apt. 496","city":"East Laurenfurt","state":"Georgia","country":"Guinea-Bissau","UserId":22,"updatedAt":"2026-11-16T08:47:51.053Z","createdAt":"2026-11-16T08:47:51.053Z"}}

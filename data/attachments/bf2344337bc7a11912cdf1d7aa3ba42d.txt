@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Users/
+{"status":"success","data":{"username":"","role":"customer","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"/assets/public/images/uploads/default.svg","isActive":true,"id":23,"email":"samanthasavage.bjgahxfc@e2e.test","updatedAt":"2026-11-16T08:47:49.458Z","createdAt":"2026-11-16T08:47:49.458Z","deletedAt":null}}
