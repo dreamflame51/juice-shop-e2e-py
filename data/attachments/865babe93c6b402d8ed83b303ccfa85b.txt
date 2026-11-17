@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Elizabeth Davis","mobileNum":2007434261,"zipCode":"34575","streetAddress":"2854 Miller Stream Apt. 301","city":"North Cody","state":"Mississippi","country":"Argentina","UserId":22,"updatedAt":"2026-11-17T09:54:20.858Z","createdAt":"2026-11-17T09:54:20.858Z"}}

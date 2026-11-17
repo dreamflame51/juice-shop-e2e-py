@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Lisa Rhodes","mobileNum":3793571364,"zipCode":"34680","streetAddress":"49621 Roberta Park Suite 892","city":"Lake Elizabethmouth","state":"Alabama","country":"Iran","UserId":29,"updatedAt":"2026-11-17T09:54:00.329Z","createdAt":"2026-11-17T09:54:00.329Z"}}

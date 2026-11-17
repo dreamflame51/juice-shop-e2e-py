@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Donald Walker","mobileNum":8618081784,"zipCode":"13113","streetAddress":"59492 Joseph Mountain","city":"New Arthurtown","state":"Alaska","country":"Zimbabwe","UserId":22,"updatedAt":"2026-11-17T09:53:59.982Z","createdAt":"2026-11-17T09:53:59.982Z"}}
