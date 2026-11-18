@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Jonathan Kelley","mobileNum":7492988285,"zipCode":"64613","streetAddress":"6412 Anderson Mountain","city":"South Colinmouth","state":"Arkansas","country":"Seychelles","UserId":22,"updatedAt":"2026-11-18T09:29:32.941Z","createdAt":"2026-11-18T09:29:32.941Z"}}

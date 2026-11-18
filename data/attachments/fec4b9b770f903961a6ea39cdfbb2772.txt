@@ -1,0 +1,2 @@
+200 http://localhost:3000/rest/basket/7/checkout
+{"orderConfirmation":"746d-17ea99ccd8027d82"}

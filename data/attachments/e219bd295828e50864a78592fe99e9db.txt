@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"David Jones","mobileNum":2369018802,"zipCode":"38573","streetAddress":"6468 Edward Park","city":"West Tara","state":"South Dakota","country":"Kuwait","UserId":23,"updatedAt":"2026-11-18T09:29:19.073Z","createdAt":"2026-11-18T09:29:19.073Z"}}

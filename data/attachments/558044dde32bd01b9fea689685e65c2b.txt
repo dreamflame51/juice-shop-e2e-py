@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kimberly Armstrong","mobileNum":983063973,"zipCode":"89582","streetAddress":"014 Jacob Expressway","city":"Fosterside","state":"Hawaii","country":"United States of America","UserId":25,"updatedAt":"2026-11-18T09:29:19.178Z","createdAt":"2026-11-18T09:29:19.178Z"}}
