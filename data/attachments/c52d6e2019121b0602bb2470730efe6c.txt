@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Gary Abbott","mobileNum":441331453,"zipCode":"43311","streetAddress":"7133 Benjamin Drives Suite 642","city":"New Keithberg","state":"Idaho","country":"Barbados","UserId":23,"updatedAt":"2026-11-19T09:40:18.120Z","createdAt":"2026-11-19T09:40:18.120Z"}}

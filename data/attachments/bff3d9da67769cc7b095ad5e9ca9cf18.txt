@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Melinda Vazquez","cardNum":4679605988741111,"expMonth":2,"expYear":2084,"UserId":25,"updatedAt":"2026-11-19T09:40:18.222Z","createdAt":"2026-11-19T09:40:18.222Z"}}
