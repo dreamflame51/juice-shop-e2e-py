@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Christopher Davis","mobileNum":4923042739,"zipCode":"78297","streetAddress":"59235 Smith Lane Suite 348","city":"Port Tonyaberg","state":"West Virginia","country":"Angola","UserId":25,"updatedAt":"2026-11-20T09:26:06.407Z","createdAt":"2026-11-20T09:26:06.407Z"}}

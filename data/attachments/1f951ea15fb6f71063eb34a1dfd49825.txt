@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Adrienne Barrera","mobileNum":6368676150,"zipCode":"10938","streetAddress":"4399 Sara Highway Suite 347","city":"Frankstad","state":"Alaska","country":"Marshall Islands","UserId":22,"updatedAt":"2026-11-20T09:26:21.033Z","createdAt":"2026-11-20T09:26:21.033Z"}}

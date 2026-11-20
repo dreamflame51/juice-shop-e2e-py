@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":8,"fullName":"Gregory Schroeder","cardNum":4069487334031111,"expMonth":11,"expYear":2093,"UserId":25,"updatedAt":"2026-11-20T09:26:06.522Z","createdAt":"2026-11-20T09:26:06.522Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Holly Watson","mobileNum":3744686377,"zipCode":"02929","streetAddress":"7999 Henry Place","city":"Lake Brendastad","state":"Oregon","country":"Australia","UserId":30,"updatedAt":"2026-11-20T09:26:06.749Z","createdAt":"2026-11-20T09:26:06.749Z"}}

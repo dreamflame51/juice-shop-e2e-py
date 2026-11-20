@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Elizabeth Stone","mobileNum":1435620866,"zipCode":"33997","streetAddress":"46454 Ernest Plain Apt. 437","city":"Tammyburgh","state":"Kansas","country":"Suriname","UserId":22,"updatedAt":"2026-11-20T09:26:06.237Z","createdAt":"2026-11-20T09:26:06.237Z"}}
