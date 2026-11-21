@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Christopher Wilcox","mobileNum":7891468200,"zipCode":"39697","streetAddress":"1147 Kimberly Underpass Apt. 904","city":"North Annamouth","state":"South Dakota","country":"Montenegro","UserId":26,"updatedAt":"2026-11-21T08:58:38.859Z","createdAt":"2026-11-21T08:58:38.859Z"}}

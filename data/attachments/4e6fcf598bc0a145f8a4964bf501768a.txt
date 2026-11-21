@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Janice Wilson","mobileNum":4569218212,"zipCode":"20787","streetAddress":"44905 Fritz Islands Apt. 404","city":"North Lisa","state":"California","country":"Iran","UserId":23,"updatedAt":"2026-11-21T08:58:38.756Z","createdAt":"2026-11-21T08:58:38.756Z"}}

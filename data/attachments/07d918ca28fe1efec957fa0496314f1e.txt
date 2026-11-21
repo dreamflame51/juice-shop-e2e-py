@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Benjamin Campbell","mobileNum":1013891539,"zipCode":"57873","streetAddress":"09762 Mackenzie Parks Apt. 866","city":"Port Richard","state":"Indiana","country":"Svalbard & Jan Mayen Islands","UserId":22,"updatedAt":"2026-11-21T08:59:09.654Z","createdAt":"2026-11-21T08:59:09.654Z"}}

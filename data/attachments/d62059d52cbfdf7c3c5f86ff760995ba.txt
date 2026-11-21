@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Elaine Olsen","mobileNum":3247762165,"zipCode":"08529","streetAddress":"163 Veronica Divide Suite 491","city":"Nicolechester","state":"North Carolina","country":"Bhutan","UserId":29,"updatedAt":"2026-11-21T08:58:39.064Z","createdAt":"2026-11-21T08:58:39.064Z"}}
