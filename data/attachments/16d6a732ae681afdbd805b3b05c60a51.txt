@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Sarah Brock","mobileNum":1276342383,"zipCode":"66239","streetAddress":"8184 Williams Locks","city":"Scottside","state":"South Carolina","country":"Colombia","UserId":22,"updatedAt":"2026-11-22T09:04:11.595Z","createdAt":"2026-11-22T09:04:11.595Z"}}

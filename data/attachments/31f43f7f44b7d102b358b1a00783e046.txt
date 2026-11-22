@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Melanie Houston","mobileNum":3067338201,"zipCode":"17917","streetAddress":"048 Jessica Forges Apt. 647","city":"Smithborough","state":"Mississippi","country":"Portugal","UserId":29,"updatedAt":"2026-11-22T09:03:53.696Z","createdAt":"2026-11-22T09:03:53.696Z"}}
