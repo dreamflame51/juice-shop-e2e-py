@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Maurice Garcia","cardNum":4992891327841111,"expMonth":1,"expYear":2082,"UserId":29,"updatedAt":"2026-11-23T09:59:48.008Z","createdAt":"2026-11-23T09:59:48.008Z"}}

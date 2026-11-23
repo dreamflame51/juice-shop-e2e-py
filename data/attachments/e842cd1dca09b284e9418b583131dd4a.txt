@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Autumn Valdez","mobileNum":4698347574,"zipCode":"02652","streetAddress":"33575 Henderson Forks","city":"West Samuel","state":"Idaho","country":"Nicaragua","UserId":25,"updatedAt":"2026-11-23T09:59:47.596Z","createdAt":"2026-11-23T09:59:47.596Z"}}

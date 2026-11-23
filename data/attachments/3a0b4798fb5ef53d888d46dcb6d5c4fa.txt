@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Tonya Hall","mobileNum":9202829963,"zipCode":"72251","streetAddress":"3536 Ramos Grove","city":"Jacksonborough","state":"Nebraska","country":"Saint Vincent and the Grenadines","UserId":22,"updatedAt":"2026-11-23T10:00:19.749Z","createdAt":"2026-11-23T10:00:19.749Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":9,"fullName":"Peter Lopez","mobileNum":6531743280,"zipCode":"02774","streetAddress":"0530 Sarah Forks","city":"Lynchhaven","state":"Tennessee","country":"Armenia","UserId":29,"updatedAt":"2026-11-23T09:59:47.961Z","createdAt":"2026-11-23T09:59:47.961Z"}}
