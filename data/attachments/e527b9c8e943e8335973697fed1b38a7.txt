@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Joshua Brown","mobileNum":7343729237,"zipCode":"97852","streetAddress":"9756 Cohen Heights Apt. 561","city":"Jenniferview","state":"Arkansas","country":"Egypt","UserId":22,"updatedAt":"2026-11-24T11:49:40.023Z","createdAt":"2026-11-24T11:49:40.023Z"}}

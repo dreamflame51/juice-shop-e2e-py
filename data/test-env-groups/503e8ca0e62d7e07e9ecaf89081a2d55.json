@@ -1,1 +1,1 @@
-{"id":"503e8ca0e62d7e07e9ecaf89081a2d55","fullName":"tests.api.auth.test_login#test_rejects_a_wrong_password_with_401_and_no_token","name":"test_rejects_a_wrong_password_with_401_and_no_token","status":"passed","testResultsByEnv":{"default":"1525dc2908819fa415afcb120e2419bc"}}
+{"id":"503e8ca0e62d7e07e9ecaf89081a2d55","fullName":"tests.api.auth.test_login#test_rejects_a_wrong_password_with_401_and_no_token","name":"test_rejects_a_wrong_password_with_401_and_no_token","status":"passed","testResultsByEnv":{"default":"0daa8407be3961465f0200e521e06343"}}

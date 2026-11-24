@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Cards/
+{"status":"success","data":{"id":9,"fullName":"Rebecca Graham","cardNum":4185701220791111,"expMonth":7,"expYear":2097,"UserId":30,"updatedAt":"2026-11-24T11:49:19.149Z","createdAt":"2026-11-24T11:49:19.149Z"}}

@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Scott Smith","mobileNum":4071658944,"zipCode":"33658","streetAddress":"85611 Berry Camp Suite 102","city":"New Robinberg","state":"Pennsylvania","country":"Western Sahara","UserId":25,"updatedAt":"2026-11-24T11:49:18.924Z","createdAt":"2026-11-24T11:49:18.924Z"}}

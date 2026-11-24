@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Raymond Gates","mobileNum":5461745971,"zipCode":"82653","streetAddress":"544 Nicholas Lake","city":"Marcside","state":"Virginia","country":"Tanzania","UserId":22,"updatedAt":"2026-11-24T11:49:18.838Z","createdAt":"2026-11-24T11:49:18.838Z"}}
