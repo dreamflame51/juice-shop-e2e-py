@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Erin Ward","mobileNum":1358494730,"zipCode":"25346","streetAddress":"8962 Barrett Fields","city":"Lake Kyle","state":"North Dakota","country":"Israel","UserId":25,"updatedAt":"2026-11-25T10:42:18.567Z","createdAt":"2026-11-25T10:42:18.567Z"}}

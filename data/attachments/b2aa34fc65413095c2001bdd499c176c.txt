@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Tristan Rios Jr.","mobileNum":8112776738,"zipCode":"90419","streetAddress":"8872 Smith Tunnel Apt. 640","city":"Davidton","state":"California","country":"Isle of Man","UserId":22,"updatedAt":"2026-11-25T10:42:52.281Z","createdAt":"2026-11-25T10:42:52.281Z"}}

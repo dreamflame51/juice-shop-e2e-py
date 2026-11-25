@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"James Silva MD","mobileNum":3078451519,"zipCode":"36996","streetAddress":"3144 Richard Views Suite 260","city":"North Bryan","state":"Wisconsin","country":"Spain","UserId":23,"updatedAt":"2026-11-25T10:42:18.429Z","createdAt":"2026-11-25T10:42:18.429Z"}}
