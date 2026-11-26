@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Lucas Williams","mobileNum":3671883821,"zipCode":"07882","streetAddress":"02605 Robert Valleys","city":"Howellchester","state":"Wisconsin","country":"France","UserId":24,"updatedAt":"2026-11-26T10:12:50.261Z","createdAt":"2026-11-26T10:12:50.261Z"}}

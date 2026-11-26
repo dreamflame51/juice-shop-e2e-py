@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Brittany Williams","mobileNum":6906452267,"zipCode":"28971","streetAddress":"6928 Daniel Ramp Apt. 251","city":"Weaverside","state":"Connecticut","country":"Chad","UserId":22,"updatedAt":"2026-11-26T10:13:09.446Z","createdAt":"2026-11-26T10:13:09.446Z"}}

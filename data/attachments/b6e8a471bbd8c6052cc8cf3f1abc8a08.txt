@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kristin Walker","mobileNum":459482415,"zipCode":"00130","streetAddress":"196 Johnson Roads Apt. 193","city":"New Erica","state":"North Carolina","country":"Cayman Islands","UserId":25,"updatedAt":"2026-11-26T10:12:50.406Z","createdAt":"2026-11-26T10:12:50.406Z"}}
