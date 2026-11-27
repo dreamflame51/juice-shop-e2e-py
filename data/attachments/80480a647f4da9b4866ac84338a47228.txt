@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"David Burns","mobileNum":4762513832,"zipCode":"34490","streetAddress":"033 Zachary Course","city":"Gonzalezton","state":"Nebraska","country":"Kenya","UserId":25,"updatedAt":"2026-11-27T10:18:34.157Z","createdAt":"2026-11-27T10:18:34.157Z"}}

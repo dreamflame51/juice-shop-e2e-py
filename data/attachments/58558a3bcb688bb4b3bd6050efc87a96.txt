@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Marc Contreras","mobileNum":2040630595,"zipCode":"29382","streetAddress":"12577 Reynolds Freeway","city":"Aguilarmouth","state":"Illinois","country":"Czech Republic","UserId":22,"updatedAt":"2026-11-27T10:18:50.194Z","createdAt":"2026-11-27T10:18:50.194Z"}}
