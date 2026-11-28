@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":8,"fullName":"Kyle Johnson","mobileNum":9691644864,"zipCode":"13133","streetAddress":"84074 Horn Way","city":"Lake Stephenfort","state":"Pennsylvania","country":"Argentina","UserId":25,"updatedAt":"2026-11-28T09:37:37.319Z","createdAt":"2026-11-28T09:37:37.319Z"}}

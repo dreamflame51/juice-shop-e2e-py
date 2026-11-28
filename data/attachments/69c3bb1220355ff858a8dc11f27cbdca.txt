@@ -1,0 +1,2 @@
+201 http://localhost:3000/api/Addresss/
+{"status":"success","data":{"id":7,"fullName":"Melissa Blackburn","mobileNum":6978551947,"zipCode":"72626","streetAddress":"3304 Robertson Manor Apt. 210","city":"Dicksonbury","state":"Arkansas","country":"Estonia","UserId":23,"updatedAt":"2026-11-28T09:37:37.218Z","createdAt":"2026-11-28T09:37:37.218Z"}}
